@@ -371,9 +371,9 @@ function wireframe_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Interchangeable Left Sidebar', 'wireframe' ),
-			'id'            => 'sidebar-5',
-			'description'   => __( 'Add widgets here to appear in your left sidebar on blog posts and archive pages.', 'wireframe' ),
+			'name'          => __( 'Global Header Top Right Widget Area', 'wireframe' ),
+			'id'            => 'sidebar-6',
+			'description'   => __( 'Add widgets to appear in the right side of the global header.', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
