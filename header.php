@@ -38,7 +38,7 @@
 			<?php endif; ?>
 
 			<?php if (the_custom_logo() == null)
-				?><img class="theImg" src="/wp-content/themes/wireframe/assets/images/defaultLogo.png" style="max-width:100px;" />
+				?><img class="theImg" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
 			<?php
 			the_custom_logo(); ?>
 
@@ -55,8 +55,8 @@
 
 			<?php
 				if(!is_active_sidebar('sidebar-4')){
-					?><img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-facebook-icon.png" style="height:47px;" />
-					<img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
+					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
+					<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
 				}
 				if ( is_active_sidebar( 'sidebar-4' ) ) {
 					dynamic_sidebar( 'sidebar-4' );
