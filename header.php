@@ -54,6 +54,10 @@
 			</div> <!--tagline-container-->
 
 			<?php
+				if(!is_active_sidebar('sidebar-4')){
+					?><img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-facebook-icon.png" style="height:47px;" />
+					<img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
+				}
 				if ( is_active_sidebar( 'sidebar-4' ) ) {
 					dynamic_sidebar( 'sidebar-4' );
 				}
