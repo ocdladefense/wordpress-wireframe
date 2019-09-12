@@ -36,12 +36,24 @@
 					</div><!-- .wrap -->
 				</div><!-- .navigation-main -->
 			<?php endif; ?>
-
+		<div class="logo-container">
 			<?php if (the_custom_logo() == null)
-				?><img class="theImg" src="/wp-content/themes/wireframe/assets/images/defaultLogo.png" style="max-width:100px;" />
+				?><img class="theImg default-logo" src="/wp-content/themes/wireframe/assets/images/defaultLogo.png" style="max-width:100px;" />
 			<?php
 			the_custom_logo(); ?>
-
+		</div>
+		<div class="search-widget-style">
+            <?php
+			if ( is_active_sidebar( 'sidebar-2' ) ) {
+				?>
+				<div class="widget-column banner-widget-area">
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+				</div>
+				<?php
+			}
+			?>
+			</div>
+			
 			<div class="tagline-container">
 				<strong class="tagline"> 
 					<?php 
@@ -53,27 +65,20 @@
 				</strong>
 			</div> <!--tagline-container-->
 
-			<?php
-				if(!is_active_sidebar('sidebar-4')){
-					?><img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-facebook-icon.png" style="height:47px;" />
-					<img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
-				}
-				if ( is_active_sidebar( 'sidebar-4' ) ) {
-					dynamic_sidebar( 'sidebar-4' );
-				}
-			?>
+			<div class="social-media-icon-container">
+				<?php
+					if(!is_active_sidebar('sidebar-4')){
+						?><img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-facebook-icon.png" style="height:47px;" />
+						<img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
+					}
+					if ( is_active_sidebar( 'sidebar-4' ) ) {
+						dynamic_sidebar( 'sidebar-4' );
+					}
+				?>
+			</div>
 		</div><!--global-header-->
 
 		<header id="masthead" class="site-header" role="banner">
-			<?php
-			if ( is_active_sidebar( 'sidebar-2' ) ) {
-				?>
-				<div class="widget-column banner-widget-area">
-					<?php dynamic_sidebar( 'sidebar-2' ); ?>
-				</div>
-				<?php
-			}
-			?>
 			<?php
 			if ( is_active_sidebar( 'sidebar-6' ) ) {
 				?>
