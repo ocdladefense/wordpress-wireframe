@@ -67,6 +67,7 @@ function wireframe_setup() {
 			'menu2' => __('Menu #2', 'wireframe'),
 			'menu3' => __('Menu #3', 'wireframe'),
 			'social' => __( 'Social Links Menu', 'wireframe' ),
+			'site-map' => __('Site Map', 'wireframe')
 		)
 	);
 

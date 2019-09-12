@@ -62,7 +62,7 @@ get_header(); ?>
 		</div>
 
 		<div class="menuImage" id="menuImage">
-			<img class="theImg" src="/wp-content/themes/wireframe/assets/images/Capture.PNG" />
+			<img class="theImg" src="<?php echo get_template_directory_uri(); ?>/assets/images/Capture.PNG" />
 		</div>
 		<h1 class="announcments-label">Announcements</h1>
 		<div class="trevor-posts-container">

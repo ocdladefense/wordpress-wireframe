@@ -38,7 +38,7 @@
 			<?php endif; ?>
 		<div class="logo-container">
 			<?php if (the_custom_logo() == null)
-				?><img class="theImg default-logo" src="/wp-content/themes/wireframe/assets/images/defaultLogo.png" style="max-width:100px;" />
+				?><img class="theImg" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
 			<?php
 			the_custom_logo(); ?>
 		</div>
@@ -65,17 +65,15 @@
 				</strong>
 			</div> <!--tagline-container-->
 
-			<div class="social-media-icon-container">
-				<?php
-					if(!is_active_sidebar('sidebar-4')){
-						?><img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-facebook-icon.png" style="height:47px;" />
-						<img class="default-social" src="/wp-content/themes/wireframe/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
-					}
-					if ( is_active_sidebar( 'sidebar-4' ) ) {
-						dynamic_sidebar( 'sidebar-4' );
-					}
-				?>
-			</div>
+			<?php
+				if(!is_active_sidebar('sidebar-4')){
+					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
+					<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
+				}
+				if ( is_active_sidebar( 'sidebar-4' ) ) {
+					dynamic_sidebar( 'sidebar-4' );
+				}
+			?>
 		</div><!--global-header-->
 
 		<header id="masthead" class="site-header" role="banner">
