@@ -42,17 +42,18 @@
 			<?php
 			the_custom_logo(); ?>
 		</div>
+
 		<div class="search-widget-style">
             <?php
-			if ( is_active_sidebar( 'sidebar-2' ) ) {
+			if ( is_active_sidebar( 'sidebar-4' ) ) {
 				?>
 				<div class="widget-column banner-widget-area">
-					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+					<?php dynamic_sidebar( 'sidebar-4' ); ?>
 				</div>
 				<?php
 			}
 			?>
-			</div>
+		</div>
 			
 			<div class="tagline-container">
 				<strong class="tagline"> 
@@ -64,24 +65,25 @@
 					?>
 				</strong>
 			</div> <!--tagline-container-->
-
+			<div class="social-media-icon-container">
 			<?php
-				if(!is_active_sidebar('sidebar-4')){
+				if(!is_active_sidebar('sidebar-6')){
 					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
 					<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
 				}
-				if ( is_active_sidebar( 'sidebar-4' ) ) {
-					dynamic_sidebar( 'sidebar-4' );
+				if ( is_active_sidebar( 'sidebar-6' ) ) {
+					dynamic_sidebar( 'sidebar-6' );
 				}
 			?>
+			</div>
 		</div><!--global-header-->
 
 		<header id="masthead" class="site-header" role="banner">
 			<?php
-			if ( is_active_sidebar( 'sidebar-6' ) ) {
+			if ( is_active_sidebar( 'sidebar-2' ) ) {
 				?>
 				<div class="widget-column banner-widget-area">
-					<?php dynamic_sidebar( 'sidebar-6' ); ?>
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
 				</div>
 				<?php
 			}
