@@ -54,7 +54,7 @@
 			</div> <!--tagline-container-->
 
 			<?php
-				if(!is_active_sidebar('sidebar-4')){
+				if(!is_active_sidebar('sidebar-6')){
 					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
 					<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
 				}

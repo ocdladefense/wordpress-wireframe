@@ -39,16 +39,13 @@
 					<?php
 				endif;
 
-				if(!is_active_sidebar('sidebar-3'))
+				if(!has_nav_menu('site-map'))
 					get_template_part( 'template-parts/footer/site', 'infoDefault' );
-				?>
-				<?php
-					if(!is_active_sidebar('sidebar-4')){
+				wp_nav_menu('site-map');
+
+					if(!is_active_sidebar('sidebar-3')){
 						?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
 						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
-					}
-					if ( is_active_sidebar( 'sidebar-4' ) ) {
-						dynamic_sidebar( 'sidebar-4' );
 					}
 			?>
 			</div><!-- .wrap -->

@@ -334,17 +334,6 @@ function wireframe_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Interchangeable Left Sidebar', 'wireframe' ),
-			'id'            => 'sidebar-5',
-			'description'   => __( 'Add widgets here to appear in your left sidebar on blog posts and archive pages.', 'wireframe' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
 
 	register_sidebar(
 		array(
@@ -374,6 +363,17 @@ function wireframe_widgets_init() {
 			'name'          => __( 'Global Header Widget Area', 'wireframe' ),
 			'id'            => 'sidebar-4',
 			'description'   => __( 'Add widgets to appear in the global header.', 'wireframe' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Interchangeable Left Sidebar', 'wireframe' ),
+			'id'            => 'sidebar-5',
+			'description'   => __( 'Add widgets here to appear in your left sidebar on blog posts and archive pages.', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

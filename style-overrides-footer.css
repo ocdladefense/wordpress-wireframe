@@ -7,3 +7,6 @@
 .site-footer .widget{
     padding:0px;
 }
+.site-footer .menu li{
+    list-style: none;
+}
