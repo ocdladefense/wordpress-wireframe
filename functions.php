@@ -327,7 +327,7 @@ function wireframe_widgets_init() {
 		array(
 			'name'          => __( 'Global Header Left Widget Area', 'wireframe' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in the left side of the global header area. (ie search or social media)', 'wireframe' ),
+			'description'   => __( 'Add widgets here to appear in the left side of the global header area. (i.e. search or social media)', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -339,7 +339,7 @@ function wireframe_widgets_init() {
 		array(
 			'name'          => __( 'Global Header Right Widget Area', 'wireframe' ),
 			'id'            => 'sidebar-2',
-			'description'   => __( 'Add widgets here to appear in the right side of the global header area.  (ie search or social media)', 'wireframe' ),
+			'description'   => __( 'Add widgets here to appear in the right side of the global header area.  (i.e. search or social media)', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -384,7 +384,7 @@ function wireframe_widgets_init() {
 		array(
 			'name'          => __( 'Footer Left Widget Area', 'wireframe' ),
 			'id'            => 'sidebar-6',
-			'description'   => __( 'Add widgets here to appear in the left side of the footer area.', 'wireframe' ),
+			'description'   => __( 'Add widgets here to appear in the left side of the footer area. (i.e. social media icons or something similar)', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -395,7 +395,7 @@ function wireframe_widgets_init() {
 		array(
 			'name'          => __( 'Footer Center Widget Area', 'wireframe' ),
 			'id'            => 'sidebar-7',
-			'description'   => __( 'Add widgets here to appear in the center of the footer area.', 'wireframe' ),
+			'description'   => __( 'Add widgets here to appear in the center of the footer area.  (i.e. A site map perhaps, or maybe a company/site info tagline)', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -405,8 +405,8 @@ function wireframe_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => __( 'Footer Right Widget Area', 'wireframe' ),
-			'id'            => 'sidebar-7',
-			'description'   => __( 'Add widgets here to appear in the right side of the footer area.', 'wireframe' ),
+			'id'            => 'sidebar-8',
+			'description'   => __( 'Add widgets here to appear in the right side of the footer area.  (i.e. social media icons or something similar)', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -416,7 +416,7 @@ function wireframe_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => __( 'Interchangeable Widget Area #1', 'wireframe' ),
-			'id'            => 'sidebar-8',
+			'id'            => 'sidebar-9',
 			'description'   => __( 'Widget intended to be used with the interchangeable widget content plugin.', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -427,7 +427,7 @@ function wireframe_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => __( 'Interchangeable Widget Area #2', 'wireframe' ),
-			'id'            => 'sidebar-9',
+			'id'            => 'sidebar-10',
 			'description'   => __( 'Widget intended to be used with the interchangeable widget content plugin.', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
