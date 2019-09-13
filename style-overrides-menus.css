@@ -112,6 +112,7 @@
 }
 #cssmenu{
     width:fit-content;
+    border:none;
 }
 .main{
   display:none;
