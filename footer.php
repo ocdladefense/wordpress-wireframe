@@ -19,8 +19,6 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
 				<?php
-				get_template_part( 'template-parts/footer/footer', 'widgets' );
-
 				if ( has_nav_menu( 'social' ) ) :
 					?>
 					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'wireframe' ); ?>">
@@ -39,14 +37,15 @@
 					<?php
 				endif;
 
+				
+				get_template_part('template-parts/footer/footer', 'widgetLeft');
+
 				if(!has_nav_menu('site-map'))
 					get_template_part( 'template-parts/footer/site', 'infoDefault' );
-				wp_nav_menu('site-map');
+				if(has_nav_menu('site-map'))
+					wp_nav_menu('site-map');
 
-					if(!is_active_sidebar('sidebar-3')){
-						?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
-						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
-					}
+				get_template_part('template-parts/footer/footer', 'widgetRight');
 			?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
