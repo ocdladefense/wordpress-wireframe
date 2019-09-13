@@ -45,10 +45,10 @@
 
 		<div class="search-widget-style">
             <?php
-			if ( is_active_sidebar( 'sidebar-4' ) ) {
+			if ( is_active_sidebar( 'sidebar-1' ) ) {
 				?>
 				<div class="widget-column banner-widget-area">
-					<?php dynamic_sidebar( 'sidebar-4' ); ?>
+					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				</div>
 				<?php
 			}
@@ -67,27 +67,19 @@
 			</div> <!--tagline-container-->
 			<div class="social-media-icon-container">
 			<?php
-				if(!is_active_sidebar('sidebar-6')){
+				if(!is_active_sidebar('sidebar-2')){
 					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
 					<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
 				}
-				if ( is_active_sidebar( 'sidebar-6' ) ) {
-					dynamic_sidebar( 'sidebar-6' );
+				if ( is_active_sidebar( 'sidebar-2' ) ) {
+					dynamic_sidebar( 'sidebar-2' );
 				}
 			?>
 			</div>
 		</div><!--global-header-->
 
 		<header id="masthead" class="site-header" role="banner">
-			<?php
-			if ( is_active_sidebar( 'sidebar-2' ) ) {
-				?>
-				<div class="widget-column banner-widget-area">
-					<?php dynamic_sidebar( 'sidebar-2' ); ?>
-				</div>
-				<?php
-			}
-			?>
+		
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
 				<div class="navigation-top">
 					<div  id="cssmenu" class="wrap">
@@ -97,12 +89,39 @@
 			<?php endif; ?>
 		</header><!-- #masthead -->
 
+		<!--BANNER WIDGET AREAS--> 
+		<!--Left Banner Widget Area -->
 		<?php
+			if ( is_active_sidebar( 'sidebar-3' ) ) {?>
+				<div class="widget-column banner-widget-area-left">
+					<?php dynamic_sidebar( 'sidebar-3' ); ?>
+				</div>
+			<?php
+				}
+			?>
 
-		/*
-		* If a regular post or page, and not the front page, show the featured image.
-		* Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-		*/
+		<!--Center Banner Widget Area -->
+		<?php
+			if ( is_active_sidebar( 'sidebar-4' ) ) {?>
+				<div class="widget-column banner-widget-area-center">
+					<?php dynamic_sidebar( 'sidebar-4' ); ?>
+				</div>
+			<?php
+				}
+			?>
+		<!--Right Banner Widget Area -->
+		<?php
+			if ( is_active_sidebar( 'sidebar-5' ) ) {?>
+				<div class="widget-column banner-widget-area-right">
+					<?php dynamic_sidebar( 'sidebar-5' ); ?>
+				</div>
+			<?php
+				}
+			?>
+		
+		<!--If a regular post or page, and not the front page, show the featured image.
+		Using get_queried_object_id() here since the $post global may not be set before a call to the_post().-->
+		<?php
 		if ( ( is_single() || ( is_page() && ! wireframe_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
 			echo '<div class="single-featured-image-header">';
 			echo get_the_post_thumbnail( get_queried_object_id(), 'wireframe-featured-image' );
