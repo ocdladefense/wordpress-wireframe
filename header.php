@@ -79,6 +79,8 @@
 		</div><!--global-header-->
 
 		<header id="masthead" class="site-header" role="banner">
+
+		<img class="site-header" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 		
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
 				<div class="navigation-top">
@@ -87,6 +89,10 @@
 					</div><!-- .wrap -->
 				</div><!-- .navigation-top -->
 			<?php endif; ?>
+
+			
+
+			
 		</header><!-- #masthead -->
 
 		<!--BANNER WIDGET AREAS--> 
