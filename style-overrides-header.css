@@ -17,6 +17,7 @@
 
     .global-header{
         padding-top:11px;
+        z-index: 9999;
     }
     
     .banner-widget-area {
@@ -55,5 +56,8 @@
     }
     .search-widget-style{
         display: inline-block;
+    }
+    .site-header{
+        width:fit-content;
     }
 }

@@ -30,17 +30,6 @@ body{
 .global-header-content{
 	padding:20px;
 }
-.site-header{
-	background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(/wp-content/themes/wireframe/assets/images/defaultBannerImage.jpg);
-	background-repeat: no-repeat;
-	margin:auto;
-	background-size: cover;
-	background-position-y: 0,-292px;
-	background-position: top;
-	margin-top: 63px;
-	padding:10px;
-	text-align: center;
-}
 .custom-logo-link img{
 	height: 33px;
 }
