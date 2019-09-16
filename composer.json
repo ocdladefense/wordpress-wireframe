@@ -1,0 +1,14 @@
+{
+    "name": "clickpdx/wireframe",
+    "description": "wireframe wordpress theme",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "trevoruehlinx1",
+            "email": "trevoruehlinx1@gmail.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
