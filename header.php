@@ -36,11 +36,10 @@
 					</div><!-- .wrap -->
 				</div><!-- .navigation-main -->
 			<?php endif; ?>
+
 		<div class="logo-container">
-			<?php if (the_custom_logo() == null)
-				?><img class="theImg" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
-			<?php
-			the_custom_logo(); ?>
+			<?php if (the_custom_logo())?>
+				<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
 		</div>
 
 		<div class="search-widget-style">
