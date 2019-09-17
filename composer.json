@@ -9,6 +9,11 @@
         }
     ],
     "require": {
-        "composer/installers": "~1.0"
+        "composer/installers": "~1.0",
+        "wpackagist-plugin/custom-sidebars":"dev-trunk",
+        "wpackagist-plugin/my-social-widget":"dev-trunk",
+        "wpackagist-plugin/fg-drupal-to-wp":"dev-trunk",
+        "phpdocumentor/phpdocumentor": "2.*",
+        "phpunit/phpunit": "^7"
     }
 }
