@@ -11,6 +11,9 @@
     text-align: center;
     margin-left: -8%;
 }
+.tagline{
+    font-size:larger;
+}
 .global-header{
     padding-top:11px;
     z-index: 9999;
