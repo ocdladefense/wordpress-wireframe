@@ -15,6 +15,7 @@
     font-size:larger;
 }
 .global-header{
+    background-color:lightblue;
     padding-top:11px;
     z-index: 9999;
 }
