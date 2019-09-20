@@ -545,8 +545,19 @@ function wireframe_scripts() {
 		'quote' => wireframe_get_svg( array( 'icon' => 'quote-right' ) ),
 	);
 
+	if ( has_nav_menu( 'top' ) ) {
+		wp_enqueue_script( 'wireframe-navigation-top', get_theme_file_uri( '/assets/js/navigation-top.js' ), array( 'jquery' ), '1.0', true );
+		$wireframe_l10n['expand']   = __( 'Expand child menu', 'wireframe' );
+		$wireframe_l10n['collapse'] = __( 'Collapse child menu', 'wireframe' );
+		$wireframe_l10n['icon']     = wireframe_get_svg(
+			array(
+				'icon'     => 'angle-down',
+				'fallback' => true,
+			)
+		);
+	}
 	if ( has_nav_menu( 'main' ) ) {
-		wp_enqueue_script( 'wireframe-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		wp_enqueue_script( 'wireframe-navigation-main', get_theme_file_uri( '/assets/js/navigation-main.js' ), array( 'jquery' ), '1.0', true );
 		$wireframe_l10n['expand']   = __( 'Expand child menu', 'wireframe' );
 		$wireframe_l10n['collapse'] = __( 'Collapse child menu', 'wireframe' );
 		$wireframe_l10n['icon']     = wireframe_get_svg(

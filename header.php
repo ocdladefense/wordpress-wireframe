@@ -28,7 +28,9 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wireframe' ); ?></a>
 		
 
-		<div class="flex-container global-header" ><!--global-header-->
+		<div id="global-header" class="flex-container global-header" ><!--global-header-->
+
+			<!--MAIN NAVIGATION-->
 			<?php if ( has_nav_menu( 'main' ) ) : ?>
 				<div class="navigation-main">
 					<div class="wrap">
@@ -37,22 +39,20 @@
 				</div><!-- .navigation-main -->
 			<?php endif; ?>
 
-		<div class="logo-container">
+			<!--CUSTOM LOGO-->
 			<?php if (the_custom_logo())?>
 				<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
-		</div>
 
-		<div class="search-widget-style">
+			
+			
             <?php
 			if ( is_active_sidebar( 'sidebar-1' ) ) {
 				?>
-				<div class="widget-column banner-widget-area">
+				<div class="widget-column banner-widget-area sidebar-1">
 					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				</div>
 				<?php
-			}
-			?>
-		</div>
+			}?>
 			
 			<div class="tagline-container">
 				<strong class="tagline"> 
@@ -64,6 +64,7 @@
 					?>
 				</strong>
 			</div> <!--tagline-container-->
+			
 			<div class="social-media-icon-container">
 			<?php
 				if(!is_active_sidebar('sidebar-2')){
