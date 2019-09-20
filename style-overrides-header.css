@@ -90,6 +90,9 @@ label {
         width: 175px;
         height: 25px;
     }
+    .sidebar-1 .search-field::placeholder{
+        color:black;
+    }
     .search-icon{
         height:30px;
     }
