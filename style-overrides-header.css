@@ -45,6 +45,9 @@ label {
 .site-header{
     width:fit-content;
 }
+.sidebar-1 .search-field::placeholder{
+    color:black;
+}
 @media screen and (min-width:750px){
     .banner-widget-area {
         text-align: center;
@@ -89,9 +92,6 @@ label {
     .sidebar-1 .search-field{
         width: 175px;
         height: 25px;
-    }
-    .sidebar-1 .search-field::placeholder{
-        color:black;
     }
     .search-icon{
         height:30px;
