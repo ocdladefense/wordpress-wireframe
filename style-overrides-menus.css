@@ -145,48 +145,46 @@
   #top-menu ul {
     z-index: 999;  
     overflow: visible;
-}
-.js .menu-toggle {
-    color:white;
-}
-.navigation-top {
-	float: none;
-	padding:0px !important;
-	display:inline-block;
-	left: -25px;
-	margin-left: -25px;
-	margin-right: 25px;
-}
-.navigation-top .menu-scroll-down {
+  }
+  .js .menu-toggle {
+      color:white;
+  }
+  .navigation-top {
+    float: none;
+    padding:0px !important;
+    display:inline-block;
+    left: -25px;
+    margin-left: -25px;
+    margin-right: 25px;
+  }
+  .navigation-top .menu-scroll-down {
+      display:none;
+  }
+  .navigation-top li {
+      width: 230px;
+      border: 0;
+      display: inline-block;
+  }
+  .navigation-top .wrap {
+      padding:0;
+  }
+
+  .global-header .menu-top-menu-container {
+    position: absolute;
+    background-color: #fff;
+    top: 50px;
+  }
+
+  .global-header .toggled-on .menu-top-menu-container {
+    padding:3%;
+  }
+
+  .global-header .menu-top-menu-container {
+    overflow-y:scroll;
+    padding-bottom:350px;
+    height:100%;
+  }
+  .top-navigation{
     display:none;
-}
-.navigation-top li {
-    width: 230px;
-    border: 0;
-    display: inline-block;
-}
-.navigation-top .wrap {
-    padding:0;
-}
-
-.global-header .menu-top-menu-container {
-	position: absolute;
-  background-color: #fff;
-  top: 50px;
-}
-
-.global-header .toggled-on .menu-top-menu-container {
-  padding:3%;
-}
-
-.global-header .menu-top-menu-container {
-	overflow-y:scroll;
-	padding-bottom:350px;
-	height:100%;
-}
-
-.js #top-navigation .menu-toggle {
-	position:relative;
-	left:25px;
-}   
+  }
 }

@@ -30,15 +30,6 @@ body{
 .global-header-content{
 	padding:20px;
 }
-.custom-logo-link img{
-	height: 33px;
-}
-.custom-logo{
-	padding:5px;
-}
-.custom-logo-link{
-	margin-left: 18%;
-}
 .js .menu-toggle{
 	margin:0 auto;
 	padding:0;

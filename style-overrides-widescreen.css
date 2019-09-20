@@ -1,4 +1,4 @@
-@media screen and (min-width:1200px){
+@media screen and (min-width:750px){
 	/*Global Header Styles*/
 	.global-header {
 		padding:11px;
@@ -21,16 +21,6 @@
 	.site-header > div {
 		max-width:80%;
 		margin:0 auto;
-	}
-	.custom-logo{
-			margin-right: 440px;
-	}
-	.custom-logo-link img{
-		height:40px;
-	}
-	.custom-logo-link{
-			padding-right: 0px;
-			margin: 0 auto;
 	}
 	body:not(.home) .site-header{
 			height: 85px;
