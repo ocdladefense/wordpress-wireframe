@@ -1,28 +1,70 @@
 /*Styles for the global-header and banner area*/
-
-
-.custom-logo-link img{
-    height: 50px;
+/*Global Header Element*/
+.global-header{
+	position: fixed;
+	width: 100%;
+	overflow-y:visible;
+	background-color: white;
+    display:flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+    padding:1% 0 1% 0;
+	top:0;
+    left:0;
+    z-index: 9999;
 }
+.admin-bar .global-header {
+	margin-top: 46px;
+}
+.site-navigation-fixed .global-header {
+	height:100%;
+	overflow:hidden;
+}
+@media screen and (max-width: 750px) {
+    #wpadminbar {
+		position:fixed;
+    }
+    .global-header{
+        padding:2% 0 0% 0;
+    }
+}
+@media screen and (min-width:750px){
+    .global-header{
+        justify-content: unset;
+    }
+    .admin-bar .global-header {
+        margin-top: 32px;
+    }
+}
+
+/*Custom Logo*/
+@media screen and (max-width:750px){
+    .custom-logo-link img{
+        height: 24px;
+    }
+    .custom-logo-link{
+        padding:0 0 0 0;
+    }
+}
+@media screen and (min-width:750px){
+    .custom-logo-link{
+        margin: 0 2% 0 2%;
+    }
+    .custom-logo-link img{
+        height: 50px;
+    }
+}
+
+/*TagLine*/
 .tagline-container{
-    display: inline-block;
-    width: 49%;
-    height: 100%;
+    width: -webkit-fill-available;
     text-align: center;
-    margin-left: -8%;
 }
 .tagline{
     font-size:larger;
 }
-.global-header{
-    background-color:lightblue;
-    padding-top:11px;
-    z-index: 9999;
-}
-.widget {
-    padding-bottom: 0;
-}
 
+/*Search Bar Widget*/
 .search-form .search-field {
     background: none;
     border-style: solid;
@@ -30,28 +72,83 @@
     border-radius: 25px;
     width: 300px;
 }
-
+.search-form button{
+	background: none;
+}
+.search-field::placeholder {
+	color:white;
+}
+.widget {
+    padding-bottom: 0;
+}
 label {
     color: #333;
     display: block;
     font-weight: 800;
     margin-bottom: 0em;
 }
-
-.social-media-icon-container {
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 73px;
-}
 .search-widget-style{
     display: inline-block;
-}
-.site-header{
-    width:fit-content;
 }
 .sidebar-1 .search-field::placeholder{
     color:black;
 }
+@media screen and (min-width:750px){
+
+}
+
+/*Sidebar 2 (Social Media Icons)*/
+.mysocial a {
+	box-shadow: none;
+}
+.mysocialwid{
+	font-size: 24px;
+}
+#my_social_widget-2{
+    padding:0px;
+}
+@media screen and (max-width:750px){
+    .social-media-icon-container{
+        display:inline-block;
+        width:60px;
+        vertical-align: middle;
+    }
+    .social-media-icon-container .mysocial{
+        padding:0 15% 0 0;
+    }
+}
+@media screen and (min-width:750px){
+    .social-media-icon-container {
+        vertical-align: middle;
+        width: 10%;
+    }
+}
+
+/*Banner Area*/
+.banner-widget-area{
+	text-align: center;
+}
+.banner-widget-area ul li{
+	display: inline-block;
+	text-decoration: none;
+	color:white;
+	border:none;
+	border-right: 1px solid white;
+	padding-right: 14px;
+	margin-right: 12px;
+	font-weight: 600;
+}
+.banner-widget-area ul li a{
+	color:white;
+	box-shadow: unset;
+}
+.banner-widget-area ul li:last-child{
+	border-right: none;
+}
+.site-header{
+    width:fit-content;
+}
+
 @media screen and (min-width:750px){
     .banner-widget-area {
         text-align: center;
@@ -60,7 +157,7 @@ label {
         padding-left: 48px;
     }
     .sidebar-1 .search-submit{
-        right: -90px;
+        right: -40px;
         top: -8.5px;
     }
     .search-icon{
@@ -68,17 +165,8 @@ label {
     }
 }
 @media screen and (max-width:750px){
-    .global-header{
-        padding:5px;
-        height: 35px;
-    }
-    .custom-logo-link img{
-        height: 24px;
-    }
-    .custom-logo-link{
-        padding:0px;
-        margin: -24px 0px 0px 0px;
-    }
+
+
     .site-header{
         margin-top:17px;
     }
@@ -87,21 +175,17 @@ label {
     }
     .sidebar-1{
         display: inline-block;
-        vertical-align: top;
+        vertical-align:middle;
     }
     .sidebar-1 .search-submit{
-        right: -30px;
-        top: -9px;
+        right: -29px;
+        top: -8px;
     }
     .sidebar-1 .search-field{
         width: 175px;
         height: 25px;
     }
     .search-icon{
-        height:30px;
+        height:27px;
     }
-    #my_social_widget-2{
-        padding:0px;
-    }
-
 }

@@ -1,7 +1,155 @@
 /*Styles for menus*/
 
+/*Sidebars*/
+.single-post-page-wrap, .page-wrap{
+	margin:0 auto;
+	max-width: 1200px;
+	padding:0;
+}
+.ocdla-sidebar{
+	width: 14em;
+	float: left;
+	border-style: dashed;
+}
+.ocdla-sidebar{
+	font-size: 12px;
+	display: none;
+    float: none;
+    vertical-align: top;
+}
+#primary{
+	float: none !important;
+}
+.basic-page{
+	width: 65%;
+    display: inline-block;
+    margin-right: -3px;
+}
+#sidebar-right{
+	margin-left: -1px;
+}
+
+/*Main Menu Styles (navigation in the global header*/
+
+/*Main Menu Styles Small Screen*/
+@media screen and (max-width:750px){
+	#main-menu ul {
+		z-index: 999;  
+    overflow: visible;
+  }
+  .navigation-main {
+    display:inline-block;
+    vertical-align: -webkit-baseline-middle;
+	}
+	.navigation-main .menu-scroll-down {
+		display:none;
+  }
+  .navigation-main .wrap{
+    padding:0 0 0 0;
+  }
+  .navigation-main button{
+    padding:0 0 0 0;
+  }
+	.navigation-main li {
+		width: 230px;
+		border: 0;
+		display: inline-block;
+	}
+	.global-header .menu-main-menu-container {
+    overflow-y:scroll;
+		position: absolute;
+	  background-color: #fff;
+	  top: 50px;
+  }
+  .menu-main-menu-container .menu{
+    padding-left:0px;
+  }
+  .main-navigation a{
+    line-height:initial;
+    padding:0px;
+  }
+	.main-close-icon{
+		display:none;
+	}
+	.toggled-on .main-close-icon{
+		display:unset;
+	}
+	.toggled-on .main-menu-icon{
+		display:none;
+	}
+}
+@media screen and (min-width:750px){
+	.navigation-main{
+		display:none;
+	}
+}
 
 /*Top Menu Styles (Navigation in the banner area) in Widescreen*/
+#top-menu{
+	position: relative;
+  z-index: 999;
+}
+.navigation-top {
+	position: static;
+	top: auto;
+	bottom:auto;
+	left:auto;
+	right:auto;
+	background: none;
+	border: none;
+}
+#top-navigation .menu-toggle {
+	display:none;
+}
+.trevor-about-menus{
+	display:inline-block;
+	vertical-align: top;
+	list-style: none;
+}
+.trevor-menu li{
+	list-style: none;
+	padding:10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.trevor-resources-menus{
+	vertical-align: top;
+	list-style: none;
+}
+.trevor-menu-label{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	font-weight: bold;
+	margin-top:20px;
+	width:319px;
+}
+.trevor-menu a{
+	color:rgb(100, 120, 160);
+	font-weight: 600;
+}
+.trevor-menu{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	color:rgb(100, 120, 160)
+}
+.navigation-top a {
+	color:#fff;
+}
+
+.navigation-top li {
+	display:inline-block;
+	list-style:none;
+}
+
+.site-navigation-fixed.navigation-top {
+	position:static;
+}
+
+.admin-bar .site-navigation-fixed.navigation-top {
+	top:auto;
+}
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @charset "UTF-8";
 /* Base Styles */
@@ -146,12 +294,8 @@
     z-index: 999;  
     overflow: visible;
   }
-  .js .menu-toggle {
-      color:white;
-  }
   .navigation-top {
     float: none;
-    padding:0px !important;
     display:inline-block;
     left: -25px;
     margin-left: -25px;
@@ -165,23 +309,13 @@
       border: 0;
       display: inline-block;
   }
-  .navigation-top .wrap {
-      padding:0;
-  }
-
   .global-header .menu-top-menu-container {
     position: absolute;
     background-color: #fff;
     top: 50px;
   }
-
-  .global-header .toggled-on .menu-top-menu-container {
-    padding:3%;
-  }
-
   .global-header .menu-top-menu-container {
     overflow-y:scroll;
-    padding-bottom:350px;
     height:100%;
   }
   .top-navigation{

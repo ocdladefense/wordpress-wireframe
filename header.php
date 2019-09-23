@@ -32,7 +32,7 @@
 
 			<!--MAIN NAVIGATION-->
 			<?php if ( has_nav_menu( 'main' ) ) : ?>
-				<div class="navigation-main">
+				<div class="navigation-main gh-item">
 					<div class="wrap">
 						<?php get_template_part( 'template-parts/navigation/navigation', 'main' );?>
 					</div><!-- .wrap -->
@@ -40,21 +40,20 @@
 			<?php endif; ?>
 
 			<!--CUSTOM LOGO-->
-			<?php if (the_custom_logo())?>
-				<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
-
-			
+			<?php the_custom_logo()?>
+				<!--<img class="theImg default-logo-image" src="<?php //echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />-->
+				
 			
             <?php
 			if ( is_active_sidebar( 'sidebar-1' ) ) {
 				?>
-				<div class="widget-column banner-widget-area sidebar-1">
+				<div class="widget-column sidebar-1 gh-item">
 					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				</div>
 				<?php
 			}?>
 			
-			<div class="tagline-container">
+			<div class="tagline-container gh-item">
 				<strong class="tagline"> 
 					<?php 
 						if (get_bloginfo( 'description', 'display' ) == "")
@@ -65,7 +64,7 @@
 				</strong>
 			</div> <!--tagline-container-->
 			
-			<div class="social-media-icon-container">
+			<div class="social-media-icon-container sidebar-2 gh-item">
 			<?php
 				if(!is_active_sidebar('sidebar-2')){
 					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />

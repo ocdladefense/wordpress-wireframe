@@ -1,5 +1,17 @@
 /*footer syles*/
+.site-footer{
+	background-color:rgb(238, 241, 249);
+}
+.site-footer .wrap{
+	text-align: center;
+}
 
+.site-info a{
+	font-family: 'Open Sans', sans-serif;
+}
+.site-info aside{
+	font-family: 'Open Sans', sans-serif;
+}s
 .site-footer .widget-column.footer-widget-2{
     float:none;
     width: 100%;
