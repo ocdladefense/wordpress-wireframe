@@ -38,7 +38,7 @@ body.page-two-column:not(.archive) #primary .entry-content{
 .announcments-label{
     color: rgb(100, 120, 160);
     margin: 0;
-    margin-left: 6%;
+    margin-left: 17.4%;
     font-weight: bold;
 }
 .trevor-posts article figure{
@@ -51,7 +51,7 @@ body.page-two-column:not(.archive) #primary .entry-content{
 	height:100%;
 }
 .trevor-posts .entry-title::after{
-
+	
 	content:"";
 	border-style: solid;
 	display:block;
@@ -110,5 +110,10 @@ body.page-two-column:not(.archive) #primary .entry-content{
 }
 
 .page .panel-content .entry-title{
-	font-size: 1.5rem;
+	font-size: 1.5em;
+}
+
+@media screen and (max-width:750px){
+	.announcments-label{
+	margin-left: 10.4%;}
 }

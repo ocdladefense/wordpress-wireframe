@@ -86,7 +86,7 @@ body{
 	/*Post styles*/
 	.trevor-posts article{
 		display: inline-block;
-		width:49%;
+		width:100%;
 		vertical-align: top;
 	}
 	.trevor-posts .wp-block-image figure.alignleft{
