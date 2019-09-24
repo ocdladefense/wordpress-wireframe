@@ -1,0 +1,9 @@
+
+
+# Ignore the git directory.
+.git/
+
+
+
+# Ignore the vendor folder in any location.
+vendor/
