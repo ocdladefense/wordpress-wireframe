@@ -57,8 +57,9 @@
 
 /*TagLine*/
 .tagline-container{
-    width: -webkit-fill-available;
+    width: 70%;
     text-align: center;
+    padding: 12px 287px 0 0;
 }
 .tagline{
     font-size:larger;
@@ -116,11 +117,18 @@ label {
     .social-media-icon-container .mysocial{
         padding:0 15% 0 0;
     }
+    .sidebar-2 .widget_my_social_widget{
+        margin: -7px -14px 0 0;
+    }
 }
 @media screen and (min-width:750px){
     .social-media-icon-container {
+        padding: 10px 0 0 0;
         vertical-align: middle;
         width: 10%;
+    }
+    .mysocial{
+        padding:0 15px 0 0;
     }
 }
 
