@@ -39,7 +39,8 @@
   }
   .navigation-main {
     display:inline-block;
-    vertical-align: -webkit-baseline-middle;
+    vertical-align:middle;
+    margin:0 1% 0 1%;
 	}
 	.navigation-main .menu-scroll-down {
 		display:none;

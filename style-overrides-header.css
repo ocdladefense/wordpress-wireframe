@@ -4,9 +4,8 @@
 	position: fixed;
 	width: 100%;
 	overflow-y:visible;
-	background-color: white;
-    display:flex;
-    justify-content: space-around;
+    background-color: white;
+    display:inline-block;
     border-bottom: 1px solid #ccc;
     padding:1% 0 1% 0;
 	top:0;
@@ -25,7 +24,7 @@
 		position:fixed;
     }
     .global-header{
-        padding:2% 0 0% 0;
+        padding:1% 0 1% 0;
     }
 }
 @media screen and (min-width:750px){
@@ -43,7 +42,7 @@
         height: 24px;
     }
     .custom-logo-link{
-        padding:0 0 0 0;
+        margin:0 1% 0 1%;
     }
 }
 @media screen and (min-width:750px){
@@ -57,12 +56,17 @@
 
 /*TagLine*/
 .tagline-container{
-    width: 70%;
     text-align: center;
-    padding: 12px 287px 0 0;
+    display:inline-block;
+    width:42%;
 }
 .tagline{
     font-size:larger;
+}
+@media screen and (max-width:750px){
+    .tagline-container{
+        display:none;   
+    }
 }
 
 /*Search Bar Widget*/
@@ -72,9 +76,6 @@
     border-color: black;
     border-radius: 25px;
     width: 300px;
-}
-.search-form button{
-	background: none;
 }
 .search-field::placeholder {
 	color:white;
@@ -94,13 +95,44 @@ label {
 .sidebar-1 .search-field::placeholder{
     color:black;
 }
+.sidebar-1 .search-submit{
+    background:none;
+}
+@media screen and (max-width:750px){
+    .sidebar-1{
+        display: inline-block;
+        vertical-align:middle;
+    }
+    .sidebar-1 .search-submit{
+        border-radius: 41px;
+        height: 0%;
+        width: 4%;
+        right: 1px;
+        top:-1px;
+        padding:14px 28px 14px 28px;
+        background:none;
+    }
+    .sidebar-1 .search-field{
+        width: 175px;
+        height: 25px;
+    }
+    .search-icon{
+        height:27px;
+        position: absolute;
+        right: -15px;
+        top:0.3px;
+    }
+}
 @media screen and (min-width:750px){
-
+    .sidebar-1{
+        display: inline-block;
+    }
 }
 
 /*Sidebar 2 (Social Media Icons)*/
 .mysocial a {
-	box-shadow: none;
+    box-shadow: none;
+    color:blue;
 }
 .mysocialwid{
 	font-size: 24px;
@@ -108,27 +140,23 @@ label {
 #my_social_widget-2{
     padding:0px;
 }
+.social-media-icon-container .mysocial{
+    padding:0 18% 0 0;
+}
 @media screen and (max-width:750px){
     .social-media-icon-container{
         display:inline-block;
         width:60px;
         vertical-align: middle;
-    }
-    .social-media-icon-container .mysocial{
-        padding:0 15% 0 0;
-    }
-    .sidebar-2 .widget_my_social_widget{
-        margin: -7px -14px 0 0;
+        margin-left: 5%;
     }
 }
 @media screen and (min-width:750px){
     .social-media-icon-container {
-        padding: 10px 0 0 0;
+        display: inline-block;
         vertical-align: middle;
         width: 10%;
-    }
-    .mysocial{
-        padding:0 15px 0 0;
+        margin-left: 18%;
     }
 }
 
@@ -173,27 +201,7 @@ label {
     }
 }
 @media screen and (max-width:750px){
-
-
     .site-header{
         margin-top:17px;
-    }
-    .tagline-container{
-        display:none;   
-    }
-    .sidebar-1{
-        display: inline-block;
-        vertical-align:middle;
-    }
-    .sidebar-1 .search-submit{
-        right: -29px;
-        top: -8px;
-    }
-    .sidebar-1 .search-field{
-        width: 175px;
-        height: 25px;
-    }
-    .search-icon{
-        height:27px;
     }
 }
