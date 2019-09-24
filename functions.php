@@ -743,6 +743,11 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
+function wpdocs_custom_excerpt_length( $length ) {
+    return 100;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 function add_custom_style_sheet() {
 	wp_enqueue_style( 'custom-styling', get_stylesheet_directory_uri() . '/style-overrides.css' );
 	wp_enqueue_style( 'custom-header-styling', get_stylesheet_directory_uri() . '/style-overrides-header.css' );
