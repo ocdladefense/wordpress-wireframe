@@ -32,7 +32,7 @@
 			<a href="<?php the_permalink(); ?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
 				<?php
 					/* translators: %s: Name of current post */
-					the_content(
+					the_excerpt(
 						sprintf(
 							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wireframe' ),
 							get_the_title()

@@ -51,12 +51,12 @@ body.page-two-column:not(.archive) #primary .entry-content{
 	height:100%;
 }
 .trevor-posts .entry-title::after{
-	margin-left: -12px;
+
 	content:"";
 	border-style: solid;
 	display:block;
-	width: 50px;
-	color:orange;
+	width: 100px;
+	color:gold;
 	margin-top:10px;
 }
 .norm_row .sfsi_wDiv{
@@ -88,7 +88,7 @@ body.page-two-column:not(.archive) #primary .entry-content{
 {
 	color:rgb(100, 120, 160);
 	font-family: 'Open Sans', sans-serif;
-	font-size: 13px;
+	font-size: 16px;
 }
 .trevor-posts .entry-content li{
 	width: 100%;
@@ -106,5 +106,9 @@ body.page-two-column:not(.archive) #primary .entry-content{
     padding-right: 10px;
 }
 .trevor-posts .entry-title{
-	width:100%;
+	width:103%;
+}
+
+.page .panel-content .entry-title{
+	font-size: 1.5rem;
 }
