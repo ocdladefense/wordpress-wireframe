@@ -39,19 +39,21 @@
 				</div><!-- .navigation-main -->
 			<?php endif; ?>
 
-			<!--CUSTOM LOGO-->
-			<?php the_custom_logo()?>
-				<!--<img class="theImg default-logo-image" src="<?php //echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />-->
+			<div class="gh-item">
+				<!--CUSTOM LOGO-->
+				<?php the_custom_logo()?>
+					<!--<img class="theImg default-logo-image" src="<?php //echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />-->
+					
 				
-			
-            <?php
-			if ( is_active_sidebar( 'sidebar-1' ) ) {
-				?>
-				<div class="widget-column sidebar-1 gh-item">
-					<?php dynamic_sidebar( 'sidebar-1' ); ?>
-				</div>
 				<?php
-			}?>
+				if ( is_active_sidebar( 'sidebar-1' ) ) {
+					?>
+					<div class="widget-column sidebar-1">
+						<?php dynamic_sidebar( 'sidebar-1' ); ?>
+					</div>
+					<?php
+				}?>
+			</div>
 			
 			<div class="tagline-container gh-item">
 				<strong class="tagline"> 
