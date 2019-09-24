@@ -12,6 +12,10 @@
     left:0;
     z-index: 9999;
 }
+.gh-item{
+    width:33%;
+    display: inline-block;
+}
 .admin-bar .global-header {
 	margin-top: 46px;
 }
@@ -57,8 +61,7 @@
 /*TagLine*/
 .tagline-container{
     text-align: center;
-    display:inline-block;
-    width:42%;
+    display:inline;
 }
 .tagline{
     font-size:larger;
@@ -70,13 +73,7 @@
 }
 
 /*Search Bar Widget*/
-.search-form .search-field {
-    background: none;
-    border-style: solid;
-    border-color: black;
-    border-radius: 25px;
-    width: 300px;
-}
+
 .search-field::placeholder {
 	color:white;
 }
@@ -95,8 +92,22 @@ label {
 .sidebar-1 .search-field::placeholder{
     color:black;
 }
-.sidebar-1 .search-submit{
-    background:none;
+@media screen and (min-width:750px){
+    .search-form .search-field {
+        background: none;
+        border-style: solid;
+        border-color: black;
+        border-radius: 25px;
+        width: 300px;
+    }
+    .sidebar-1 .search-submit{
+        width: 46px;
+        right: 1px;
+        top:3px;
+        background-position: center;
+        background-size: 91px;
+        background-color: transparent;
+    }
 }
 @media screen and (max-width:750px){
     .sidebar-1{
@@ -140,9 +151,6 @@ label {
 #my_social_widget-2{
     padding:0px;
 }
-.social-media-icon-container .mysocial{
-    padding:0 18% 0 0;
-}
 @media screen and (max-width:750px){
     .social-media-icon-container{
         display:inline-block;
@@ -154,9 +162,7 @@ label {
 @media screen and (min-width:750px){
     .social-media-icon-container {
         display: inline-block;
-        vertical-align: middle;
-        width: 10%;
-        margin-left: 18%;
+        text-align: right;
     }
 }
 
@@ -191,13 +197,6 @@ label {
         width: 300px;
         display: inline-block;
         padding-left: 48px;
-    }
-    .sidebar-1 .search-submit{
-        right: -40px;
-        top: -8.5px;
-    }
-    .search-icon{
-        height:50px;
     }
 }
 @media screen and (max-width:750px){

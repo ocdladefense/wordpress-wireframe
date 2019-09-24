@@ -30,9 +30,6 @@ body{
 	body:not(.home) .site-header{
 			height: 85px;
 	}
-	.widget_my_social_widget{
-			padding: 14px 8px 0px 0px;
-	}
 	.widget_nav_menu{
 			display: inline-block;
 			margin: 11px 12px 0 0;
