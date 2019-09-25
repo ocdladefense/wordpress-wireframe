@@ -30,6 +30,9 @@
     .global-header{
         padding:1% 0 1% 0;
     }
+    .gh-item-1{
+        width:75%;
+    }
 }
 @media screen and (min-width:750px){
     .global-header{
@@ -92,6 +95,10 @@ label {
 .sidebar-1 .search-field::placeholder{
     color:black;
 }
+.sidebar-1{
+    display: inline-block;
+    vertical-align:middle;
+}
 @media screen and (min-width:750px){
     .search-form .search-field {
         background: none;
@@ -110,22 +117,23 @@ label {
     }
 }
 @media screen and (max-width:750px){
-    .sidebar-1{
-        display: inline-block;
-        vertical-align:middle;
+    .search-form .search-field {
+        background: none;
+        border-style: solid;
+        border-color: black;
+        border-radius: 25px;
+        width: 175px;
+        height:25px;
     }
     .sidebar-1 .search-submit{
         border-radius: 41px;
-        height: 0%;
-        width: 4%;
-        right: 1px;
-        top:-1px;
-        padding:14px 28px 14px 28px;
-        background:none;
-    }
-    .sidebar-1 .search-field{
-        width: 175px;
-        height: 25px;
+        right: 2px;
+        top: -1px;
+        padding: 14px 0px 14px 28px;
+        background-position-x: -9px;
+        background-position-y: .5px;
+        background-size: 52px;
+        background-color: transparent;
     }
     .search-icon{
         height:27px;
@@ -156,7 +164,10 @@ label {
         display:inline-block;
         width:60px;
         vertical-align: middle;
-        margin-left: 5%;
+        text-align: right;
+    }
+    .mysocial{
+        padding-right:15%;
     }
 }
 @media screen and (min-width:750px){

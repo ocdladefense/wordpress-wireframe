@@ -30,16 +30,16 @@
 
 		<div id="global-header" class="flex-container global-header" ><!--global-header-->
 
-			<!--MAIN NAVIGATION-->
-			<?php if ( has_nav_menu( 'main' ) ) : ?>
-				<div class="navigation-main gh-item">
-					<div class="wrap">
-						<?php get_template_part( 'template-parts/navigation/navigation', 'main' );?>
-					</div><!-- .wrap -->
-				</div><!-- .navigation-main -->
-			<?php endif; ?>
+			<div class="gh-item gh-item-1">
+				<!--MAIN NAVIGATION-->
+				<?php if ( has_nav_menu( 'main' ) ) : ?>
+					<div class="navigation-main">
+						<div class="wrap">
+							<?php get_template_part( 'template-parts/navigation/navigation', 'main' );?>
+						</div><!-- .wrap -->
+					</div><!-- .navigation-main -->
+				<?php endif; ?>
 
-			<div class="gh-item">
 				<!--CUSTOM LOGO-->
 				<?php the_custom_logo()?>
 					<!--<img class="theImg default-logo-image" src="<?php //echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />-->
@@ -66,7 +66,7 @@
 				</strong>
 			</div> <!--tagline-container-->
 			
-			<div class="social-media-icon-container sidebar-2 gh-item">
+			<div class="social-media-icon-container sidebar-2 gh-item gh-item-2">
 			<?php
 				if(!is_active_sidebar('sidebar-2')){
 					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
