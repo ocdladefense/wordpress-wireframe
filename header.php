@@ -42,13 +42,13 @@
 
 				<!--CUSTOM LOGO-->
 				<?php the_custom_logo()?>
-					<!--<img class="theImg default-logo-image" src="<?php //echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />-->
+					<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
 					
 				
 				<?php
 				if ( is_active_sidebar( 'global-header-left' ) ) {
 					?>
-					<div class="widget-column widget-area widget-area-global-header">
+					<div class="widget-column widget-area widget-area-global-header gh-widget-left">
 						<?php dynamic_sidebar( 'global-header-left' ); ?>
 					</div>
 					<?php
@@ -66,7 +66,7 @@
 				</strong>
 			</div> <!--tagline-container-->
 			
-			<div class="social-media-icon-container sidebar-2 gh-item gh-item-2">
+			<div class="social-media-icon-container sidebar-2 gh-item gh-item-2 gh-widget-right">
 				<?php if(!is_active_sidebar('global-header-right')): ?>
 						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
 						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" />
