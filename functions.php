@@ -140,6 +140,11 @@ function wireframe_setup() {
 				'search',
 				'text_about',
 			),
+			
+			// Make search available in the global header.
+			'global-header-left' => array(
+				'search'
+			),
 
 			// Add the core-defined business info widget to the footer 1 area.
 			'sidebar-2' => array(
@@ -323,11 +328,25 @@ function wireframe_fonts_url() {
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function wireframe_widgets_init() {
+
+	// Borrowed from wp-packagist/twentyseventeen.
+	register_sidebar(
+		array(
+			'name'          => __( 'Blog Sidebar', 'wireframe' ),
+			'id'            => 'sidebar-1',
+			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
 	register_sidebar(
 		array(
 			'name'          => __( 'Global Header Left Widget Area', 'wireframe' ),
-			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in the left side of the global header area. (i.e. search or social media) (sidebar-1)', 'wireframe' ),
+			'id'            => 'global-header-left',
+			'description'   => __( 'Add widgets here to appear in the left side of the global header area. (i.e. search or social media)', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -338,8 +357,8 @@ function wireframe_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => __( 'Global Header Right Widget Area', 'wireframe' ),
-			'id'            => 'sidebar-2',
-			'description'   => __( 'Add widgets here to appear in the right side of the global header area.  (i.e. search or social media)(sidebar-2)', 'wireframe' ),
+			'id'            => 'global-header-right',
+			'description'   => __( 'Add widgets here to appear in the right side of the global header area.  (i.e. search or social media)', 'wireframe' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
