@@ -116,4 +116,10 @@ body.page-two-column:not(.archive) #primary .entry-content{
 @media screen and (max-width:750px){
 	.announcments-label{
 	margin-left: 10.4%;}
+
+
+.page .panel-content .entry-title{
+	font-size: 1.0em;
+}
+
 }
