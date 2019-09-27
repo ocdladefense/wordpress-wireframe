@@ -46,10 +46,10 @@
 					
 				
 				<?php
-				if ( is_active_sidebar( 'sidebar-1' ) ) {
+				if ( is_active_sidebar( 'global-header-left' ) ) {
 					?>
-					<div class="widget-column sidebar-1">
-						<?php dynamic_sidebar( 'sidebar-1' ); ?>
+					<div class="widget-column widget-area widget-area-global-header">
+						<?php dynamic_sidebar( 'global-header-left' ); ?>
 					</div>
 					<?php
 				}?>
@@ -67,17 +67,13 @@
 			</div> <!--tagline-container-->
 			
 			<div class="social-media-icon-container sidebar-2 gh-item gh-item-2">
-			<?php
-				if(!is_active_sidebar('sidebar-2')){
-					?><img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
-					<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" /><?php
-				}
-				if ( is_active_sidebar( 'sidebar-2' ) ) {
-					dynamic_sidebar( 'sidebar-2' );
-				}
-			?>
+				<?php if(!is_active_sidebar('global-header-right')): ?>
+						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
+						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" />
+				<?php else: dynamic_sidebar( 'global-header-right' ); endif; ?>
 			</div>
-		</div><!--global-header-->
+			
+		</div><!-- end global-header-->
 
 		<header id="masthead" class="site-header" role="banner">
 

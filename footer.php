@@ -42,9 +42,10 @@
 
 				if(!has_nav_menu('site-map'))
 					get_template_part( 'template-parts/footer/site', 'infoDefault' );
-				if(has_nav_menu('site-map'))
+				if(has_nav_menu('site-map')){
+					?><strong class="site-map-label">Site Map</strong><?php
 					wp_nav_menu('site-map');
-
+				}
 				get_template_part('template-parts/footer/footer', 'widgetRight');
 			?>
 			</div><!-- .wrap -->
