@@ -15,9 +15,6 @@ body.page-two-column:not(.archive) #primary .entry-content{
 	width:auto;
 	float: none;
 }
-.panel-content{
-	padding:4%;
-}
 .announcement-image img{
 	width:200px;
 
