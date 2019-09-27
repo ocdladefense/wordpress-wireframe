@@ -17,6 +17,7 @@
 
 get_header(); ?>
 
+
 <div class="wrap">
 <?php get_sidebar('left'); ?>
 	<?php if ( is_home() && ! is_front_page() ) : ?>

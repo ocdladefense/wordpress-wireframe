@@ -21,6 +21,7 @@ get_header(); ?>
 <?php get_sidebar('left'); ?>
 	<div id="primary" class="basic-page content-area">
 		<main id="main" class="site-main" role="main">
+
 			<?php
 			while ( have_posts() ) :
 				the_post();

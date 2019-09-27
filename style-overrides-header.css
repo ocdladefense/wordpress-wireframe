@@ -39,6 +39,13 @@
     .global-header{
         justify-content: unset;
     }
+    body:not(.home) #masthead{
+        height: 85px;
+        margin-top:6%;
+    }
+    body:not(.home) .navigation-top{
+        margin-top:39%;
+    }
     .admin-bar .global-header {
         margin-top: 32px;
     }
