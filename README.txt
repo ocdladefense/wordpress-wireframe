@@ -1,3 +1,5 @@
+# Wireframe Theme for WordPress
+
 === Wireframe ===
 Contributors: the WordPress team
 Requires at least: WordPress 4.7
