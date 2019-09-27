@@ -43,7 +43,6 @@
 				<!--CUSTOM LOGO-->
 				<?php the_custom_logo()?>
 					<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
-					
 				
 				<?php
 				if ( is_active_sidebar( 'global-header-left' ) ) {

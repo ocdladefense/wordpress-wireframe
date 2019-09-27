@@ -109,6 +109,15 @@ body.page-two-column:not(.archive) #primary .entry-content{
 .page .panel-content .entry-title{
 	font-size: 1.5em;
 }
+.single-post-page-wrap{
+	text-align: center;
+	padding-left: 10%;
+    padding-right: 10%;
+}
+.single-post:not(.has-sidebar) #primary{
+	max-width: unset;
+	padding:3%;
+}
 
 @media screen and (max-width:750px){
 	.announcments-label{
