@@ -22,6 +22,7 @@ An extendable base theme for [WordPress](https://wordpress.org) >= 5.2
 - WordPress Import
 
 ## Features
+### Automatic Widget Installation
     Changes to sidebar.id should not affect CSS used to style widgets.
     --> What side-effects *can it have then?
     WP_Widget::update( array $new_instance, array $old_instance )
