@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Wireframe functions and definitions
  *
@@ -8,6 +9,32 @@
  * @subpackage wireframe
  * @since 1.0
  */
+$path1 = get_template_directory() . '/inc/Widget.php';
+$path2 = get_template_directory() . '/inc/Sidebar.php';
+$path3 = get_template_directory() . '/inc/WidgetFactory.php';
+$path4 = get_template_directory() . '/inc/WidgetManager.php';
+require($path1);
+require($path2);
+require($path3);
+require($path4);
+
+
+
+$widgewf = null;
+
+// Query for existing widgets.
+$manager = new WidgetManager();
+// $widgets = $manager->loadWidgets('sidebar-1');
+
+// Create a new widget.
+$wign = new Widget('my-widget-id');
+// $wign->save();
+
+// Save the widget into the sidebar.
+// $sidebar->addWidget($wign);
+// $sidebar->save();
+
+
 
 /**
  * Wireframe only works in WordPress 4.7 or later.
@@ -247,7 +274,11 @@ function wireframe_setup() {
 	$starter_content = apply_filters( 'wireframe_starter_content', $starter_content );
 
 	add_theme_support( 'starter-content', $starter_content );
+	
+
 }
+
+
 add_action( 'after_setup_theme', 'wireframe_setup' );
 
 /**
@@ -459,8 +490,22 @@ function wireframe_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'wireframe_widgets_init' );
 
+function wireframe_init_widgets_install() {
+	global $widgewf;
+	$widgewf = new WidgetFactory();
+	
+	register_widget($widgewf);
+}
+
+function wf_show_widget($name = null) {
+	// global $widgewf;
+	$widgewf = new WidgetFactory();
+	$widgewf->widget();
+}
+
+add_action( 'widgets_init', 'wireframe_widgets_init' );
+add_action( 'widgets_init', 'wireframe_init_widgets_install' );
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
  * a 'Continue reading' link.

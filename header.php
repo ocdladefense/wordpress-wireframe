@@ -44,6 +44,12 @@
 				<?php the_custom_logo()?>
 					<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
 				
+				<?php 
+
+					wf_show_widget('widge-1');
+				
+				?>
+				
 				<?php
 				if ( is_active_sidebar( 'global-header-left' ) ) {
 					?>

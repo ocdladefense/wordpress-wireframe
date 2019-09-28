@@ -1,12 +1,12 @@
 <?php
 
 
-class WidgetFactory extends WP_Widget {
+class WidgetFactory extends Widget {
 
 	/**
 	 * Sets up the widgets name etc
 	 */
-	public function __construct() {
+	public function __construct($name = null) {
 		$widget_ops = array( 
 			'classname' => 'widgetfactory',
 			'description' => 'My Widget is awesome',
@@ -20,7 +20,7 @@ class WidgetFactory extends WP_Widget {
 	 * @param array $args
 	 * @param array $instance
 	 */
-	public function widget( $args, $instance ) {
+	public function widget( $args = array(), $instance = null) {
 		// outputs the content of the widget
 		echo "<h3>Wireframe generic widget</h3>";
 	}
@@ -30,7 +30,7 @@ class WidgetFactory extends WP_Widget {
 	 *
 	 * @param array $instance The widget options
 	 */
-	public function form( $instance ) {
+	public function form( $instance = null ) {
 		// outputs the options form on admin
 	}
 
@@ -42,7 +42,7 @@ class WidgetFactory extends WP_Widget {
 	 *
 	 * @return array
 	 */
-	public function update( $new_instance, $old_instance ) {
+	public function update( $new_instance = null, $old_instance = null ) {
 		// processes widget options to be saved
 	}
 }
