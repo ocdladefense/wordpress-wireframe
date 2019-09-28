@@ -2,6 +2,7 @@
 An extendable base theme for [WordPress](https://wordpress.org) >= 5.2
 
 ### This ReadMe is written using [Markdown](https://daringfireball.net/projects/markdown/syntax#precode)
+- For more info see [this GitHub article](https://help.github.com/en/articles/creating-and-highlighting-code-blocks).
 
 ## Authors
 - [Trevor Uehlin](https://link.to.github.org)
