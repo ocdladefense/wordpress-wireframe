@@ -15,9 +15,9 @@
         }
     ],
     "require": {
-	    "php": "^7"
+	    "php": "^7",
+        "wpackagist-plugin/custom-sidebars":"dev-trunk"
     },
-	"require-dev": {},
     "options":{
         "change-comment": "Most requires were properly part of the clickpdx/devenv repo.",
         "require-comment": "We need at least PHP 7.0 to use this WordPress theme."
