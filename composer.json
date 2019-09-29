@@ -17,8 +17,9 @@
     "require": {
 	    "php": "^7"
     },
-	"require-dev": {}
+	"require-dev": {},
     "options":{
+        "change-comment": "Most requires were properly part of the clickpdx/devenv repo.",
         "require-comment": "We need at least PHP 7.0 to use this WordPress theme."
     }
 }
