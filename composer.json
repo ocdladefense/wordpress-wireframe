@@ -1,6 +1,6 @@
 {
     "name": "clickpdx/wireframe",
-    "description": "wireframe wordpress theme",
+    "description": "Wireframe Theme for WordPress",
     "type": "wordpress-theme",
     "authors": [
         {
@@ -15,12 +15,10 @@
         }
     ],
     "require": {
-        "composer/installers": "~1.0",
-        "wpackagist-plugin/custom-sidebars":"dev-trunk",
-        "wpackagist-plugin/my-social-widget":"dev-trunk"
+	    "php": "^7"
     },
-	"require-dev": {
-		"phpunit/phpunit": "^7",
-		"wpackagist-plugin/fg-drupal-to-wp":"dev-trunk"
-	}
+	"require-dev": {}
+    "options":{
+        "require-comment": "We need at least PHP 7.0 to use this WordPress theme."
+    }
 }
