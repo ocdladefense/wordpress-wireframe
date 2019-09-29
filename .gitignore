@@ -7,3 +7,9 @@
 
 # Ignore the vendor folder in any location.
 vendor/
+
+
+# Just in case.
+wp-content/
+
+
