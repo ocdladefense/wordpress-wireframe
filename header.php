@@ -69,7 +69,7 @@
 				}?>
 			</div>
 			
-			<div class="tagline-container gh-item">
+			<div class="tagline-container gh-item gh-item-2">
 				<strong class="tagline"> 
 					<?php 
 						if (strtolower(wp_get_theme()) == "wireframe" || get_bloginfo('description','display')=="Just another WordPress site")
@@ -80,7 +80,7 @@
 				</strong>
 			</div> <!--tagline-container-->
 			
-			<div class="social-media-icon-container sidebar-2 gh-item gh-item-2 gh-widget-right">
+			<div class="social-media-icon-container sidebar-2 gh-item gh-item-3 gh-widget-right">
 				<?php if(!is_active_sidebar('global-header-right')): ?>
 						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
 						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" />
