@@ -13,10 +13,17 @@
     z-index: 9999;
     vertical-align:middle;
 }
-.gh-item{
+
+
+.gh-item {
     width:33%;
     display: inline-block;
+    line-height:1.0em;
+    vertical-align:middle;
 }
+
+
+
 .admin-bar .global-header {
 	margin-top: 46px;
 }
@@ -146,7 +153,7 @@ label {
 /*TagLine*/
 .tagline-container{
     text-align: center;
-    display:inline;
+    display:inline-block;
 }
 .tagline{
     font-size:larger;
@@ -168,22 +175,17 @@ label {
 #my_social_widget-2{
     padding:0px;
 }
-@media screen and (max-width:750px){
-    .social-media-icon-container{
-        display:inline-block;
-        width:60px;
-        vertical-align: middle;
-        text-align: right;
-    }
-    .mysocial{
-        padding-right:15%;
-    }
+
+
+
+
+.social-media-icon-container {
+		text-align: right;
 }
-@media screen and (min-width:750px){
-    .social-media-icon-container {
-        display: inline-block;
-        text-align: right;
-    }
+
+
+.mysocial {
+		padding-right:15%;
 }
 
 /*Banner Area*/
