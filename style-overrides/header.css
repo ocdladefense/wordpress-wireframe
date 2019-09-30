@@ -247,17 +247,25 @@ label {
 
 @media screen and (min-width:750px) {
     .banner-widget-area-left {
-        position: absolute;
-        right:0px;
-        width:33%;
-        
+       position: absolute;
+    right: 0px;
+    width: 33%;
+    top: 250px;
+    right: 50px;
+    line-height: 2.0em; 
     }
 
     .banner-widget-area-left h2.widget-title {
-        margin-bottom: 0.5em;    
+margin-bottom: 0.5em;
+    font-size: 4.0em;
+    color: #fff;
+    line-height: 1.0em;
+    text-rendering: optimizeLegibility;
+    text-shadow: -1px -1px 0 rgb(245,239,103), 1px -1px 0 rgb(245,239,103), -1px 1px 0 rgb(245,239,103), 1px 1px 0 rgb(245,239,103);
     }
 
     .banner-widget-area-left .textwidget {
-    
+        font-size: 2.0em;
+    line-height: 1.3em;
     }
 }
