@@ -43,21 +43,16 @@ get_header(); ?>
 			<div class="homepage-menu-column">
 				<div class="trevor-menu trevor-about-menus">
 					<div class="trevor-menu-label trevor-about-menu-label">Menu #1</div>
-					<?php
-						wp_nav_menu( array('theme_location' => 'menu1'));
-					?>
+					<?php wp_nav_menu( array('theme_location' => 'menu1','fallback_cb'=>false)); ?>
 				</div>
 				<div class="trevor-menu trevor-member-menus">
 					<div class="trevor-menu-label trevor-members-menu-label">Menu #2</div>
-					<?php
-						wp_nav_menu( array('theme_location' => 'menu2'));
-					?>
+					<?php wp_nav_menu( array('theme_location' => 'menu2','fallback_cb'=>false)); ?>
 				</div>
 			</div>
 			<div class="trevor-menu trevor-resources-menus">
 				<div class="trevor-menu-label trevor-resources-menu-label">Menu #3</div>
-				<?php
-				wp_nav_menu( array('theme_location' => 'menu3'));?>
+				<?php wp_nav_menu( array('theme_location' => 'menu3','fallback_cb'=>false)); ?>
 			</div>
 		</div>
 <!-- 

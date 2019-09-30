@@ -811,16 +811,45 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
+
+
+
+
 function wpdocs_custom_excerpt_length( $length ) {
     return 100;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
-function add_custom_style_sheet() {
-	wp_enqueue_style( 'custom-styling', get_stylesheet_directory_uri() . '/style-overrides.css' );
+
+
+
+
+
+/**
+  * @function add_custom_stylesheets
+  *
+  * @description Queue up stylesheets for this theme.
+  */
+function add_custom_stylesheets() {
+	$basedir = get_stylesheet_directory_uri() .'/style-overrides';
+	$styles = array(
+		'custom-styling' => 'style-overrides.css',
+		'custom-header-styling' => 'style-overrides-header.css',
+		'custom-menu-styling' => 'style-overrides-menus.css',
+		'custom-post-styling' => 'style-overrides-post.css',
+		'custom-footer-styling' => 'style-overrides-footer.css'
+	);
+	
+	foreach($styles as $id => $uri) {
+		wp_enqueue_style($id,$basedir.'/'.$uri);
+	}
+	
+	/*
+	wp_enqueue_style( 'custom-styling', () . '/style-overrides/style-overrides.css' );
 	wp_enqueue_style( 'custom-header-styling', get_stylesheet_directory_uri() . '/style-overrides-header.css' );
 	wp_enqueue_style( 'custom-menu-styling', get_stylesheet_directory_uri() . '/style-overrides-menus.css' );
 	wp_enqueue_style( 'custom-post-styling', get_stylesheet_directory_uri() . '/style-overrides-post.css' );
 	wp_enqueue_style( 'custom-footer-styling', get_stylesheet_directory_uri() . '/style-overrides-footer.css' );
+	*/
 }
 add_action('wp_enqueue_scripts', 'add_custom_style_sheet');
