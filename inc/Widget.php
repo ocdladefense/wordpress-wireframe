@@ -9,10 +9,10 @@ class Widget extends WP_Widget {
 	// Data from the option array.
 	private $data;
 	
-	
+	private $widget_ops;
 
 	public function __construct($wid) {
-		parent::__construct( 'widgetfactory', 'Default Widget', $widget_ops );
+		parent::__construct( 'widgetfactory', 'Default Widget', $this->widget_ops );
 		$this->data = \get_option($wid, array() );
 	}
 	
