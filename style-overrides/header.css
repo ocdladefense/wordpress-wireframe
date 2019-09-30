@@ -243,3 +243,21 @@ label {
 		padding-right: 2%;
 	}
 }
+
+
+@media screen and (min-width:750px) {
+    .banner-widget-area-left {
+        position: absolute;
+        right:0px;
+        width:33%;
+        
+    }
+
+    .banner-widget-area-left h2.widget-title {
+        margin-bottom: 0.5em;    
+    }
+
+    .banner-widget-area-left .textwidget {
+    
+    }
+}
