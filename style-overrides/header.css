@@ -190,6 +190,14 @@ label {
 		padding-right:15%;
 }
 /*Banner Area*/
+.banner-tagline-container{
+    position: absolute;
+    top: 8%;
+    right: 54%; 
+}
+.banner-top-nav{
+    display: none;
+}
 .banner-widget-area{
 	text-align: center;
 }
