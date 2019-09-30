@@ -830,19 +830,23 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
   *
   * @description Queue up stylesheets for this theme.
   */
-function add_custom_stylesheets() {
-	$basedir = get_stylesheet_directory_uri() .'/style-overrides';
-	$styles = array(
-		'custom-styling' => 'style.css',
-		'custom-header-styling' => 'header.css',
-		'custom-menu-styling' => 'menu.css',
-		'custom-post-styling' => 'post.css',
-		'custom-footer-styling' => 'footer.css'
-	);
+if(!function_exists('add_custom_stylesheets')) {
+
+	function add_custom_stylesheets() {
+		$basedir = get_stylesheet_directory_uri() .'/style-overrides';
+		$styles = array(
+			'general-overrides' => 'style.css',
+			'header-overrides' => 'header.css',
+			'menu-overrides' => 'menu.css',
+			'post-overrides' => 'post.css',
+			'footer-overrides' => 'footer.css'
+		);
 	
-	foreach($styles as $id => $uri) {
-		wp_enqueue_style($id,$basedir.'/'.$uri);
+		foreach($styles as $id => $uri) {
+			wp_enqueue_style($id,$basedir.'/'.$uri);
+		}
+	
 	}
-	
+	add_action('wp_enqueue_scripts', 'add_custom_stylesheets');
+
 }
-add_action('wp_enqueue_scripts', 'add_custom_style_sheet');
