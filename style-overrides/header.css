@@ -230,7 +230,7 @@ label {
 
 @media screen and (min-width: 48em) {
 	#global-header {
-		padding-left: 5%;
-		padding-right: 5%;
+		padding-left: 2%;
+		padding-right: 2%;
 	}
 }
