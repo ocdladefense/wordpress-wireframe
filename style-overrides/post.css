@@ -1,42 +1,55 @@
 /*Styles for the posts*/
+a.more-link {
+	text-decoration:none;
+	font-size:smaller;
+}
+
+
+
 /*Post area styles*/
 .trevor-posts-container{
 	text-align: center;
 }
+
 .trevor-posts{
-	width: 93%;
-    margin: 0 auto;
-    text-align: left;
+	margin: 0 auto;
+	text-align: left;
 }
+
 .trevor-posts .wrap{
-	padding:10px;
+	padding:0px;
 }
+
 body.page-two-column:not(.archive) #primary .entry-content{
 	width:auto;
 	float: none;
 }
+
 .announcement-image img{
 	width:200px;
-
 }
+
 .wp-block-image figure.alignleft{
 	margin:0;
 }
+
 .trevor-posts .wp-block-image figure.alignleft{
 	margin:0;
 }
+
 .trevor-posts .wp-block-image .alignleft>figcaption{
 	height:0;
 	margin:0;
 }
+
 .trevor-posts p{
 	margin:0;
 }
+
 .announcments-label{
-    color: rgb(100, 120, 160);
-    margin: 0;
-    margin-left: 17.4%;
-    font-weight: bold;
+	color: rgb(100, 120, 160);
+	font-weight: bold;
+	text-align:left;
 }
 .trevor-posts article figure{
 	width:45%;
@@ -102,18 +115,18 @@ body.page-two-column:not(.archive) #primary .entry-content{
     height: 100%;
     padding-right: 10px;
 }
-.trevor-posts .entry-title{
-	width:103%;
-}
+
 
 .page .panel-content .entry-title{
 	font-size: 1.5em;
 }
+
 .single-post-page-wrap{
 	text-align: center;
 	padding-left: 10%;
-    padding-right: 10%;
+	padding-right: 10%;
 }
+
 .single-post:not(.has-sidebar) #primary{
 	max-width: unset;
 	padding:3%;

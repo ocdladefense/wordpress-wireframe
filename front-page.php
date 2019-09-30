@@ -36,25 +36,44 @@ get_header(); ?>
 				wireframe_front_page_section( null, $i );
 			}
 
-	endif; // The if ( 0 !== wireframe_panel_count() ) ends here.
+		endif; // The if ( 0 !== wireframe_panel_count() ) ends here.
 		?>
 
+
+		<?php if(wireframe_has_menu_content()): ?>
+		
 		<div class="homePageMenus">
 			<div class="homepage-menu-column">
+			
+			
+			<?php if(has_nav_menu('menu1')):  ?>
 				<div class="trevor-menu trevor-about-menus">
 					<div class="trevor-menu-label trevor-about-menu-label">Menu #1</div>
 					<?php wp_nav_menu( array('theme_location' => 'menu1','fallback_cb'=>false)); ?>
 				</div>
+			<?php endif; ?>
+			
+			
+			<?php if(has_nav_menu('menu2')):  ?>
 				<div class="trevor-menu trevor-member-menus">
 					<div class="trevor-menu-label trevor-members-menu-label">Menu #2</div>
 					<?php wp_nav_menu( array('theme_location' => 'menu2','fallback_cb'=>false)); ?>
 				</div>
-			</div>
-			<div class="trevor-menu trevor-resources-menus">
-				<div class="trevor-menu-label trevor-resources-menu-label">Menu #3</div>
-				<?php wp_nav_menu( array('theme_location' => 'menu3','fallback_cb'=>false)); ?>
+			<?php endif; ?>
+			
+			
+			<?php if(has_nav_menu('menu3')):  ?>
+				<div class="trevor-menu trevor-resources-menus">
+					<div class="trevor-menu-label trevor-resources-menu-label">Menu #3</div>
+					<?php wp_nav_menu( array('theme_location' => 'menu3','fallback_cb'=>false)); ?>
+				</div>
+			<?php endif; ?>
+		
 			</div>
 		</div>
+		
+		<?php endif; ?>		
+		
 <!-- 
 		<div class="menuImage" id="menuImage">
 			<img class="theImg default-icon-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/Capture.PNG" />

@@ -850,3 +850,12 @@ if(!function_exists('add_custom_stylesheets')) {
 	add_action('wp_enqueue_scripts', 'add_custom_stylesheets');
 
 }
+
+
+function wireframe_has_menu_content(){
+	foreach(array('menu1','menu2','menu3') as $id) {
+		if(has_nav_menu($id)) return true;
+	}
+	
+	return false;
+}

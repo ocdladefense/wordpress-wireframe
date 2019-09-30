@@ -22,3 +22,10 @@
 .site-footer .menu li{
     list-style: none;
 }
+
+
+@media screen and (min-width: 48em) {
+	.site-footer {
+		min-height: 100vh;
+	}
+}

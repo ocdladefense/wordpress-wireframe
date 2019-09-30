@@ -41,12 +41,21 @@
 				<?php endif; ?>
 
 				<!--CUSTOM LOGO-->
-				<?php the_custom_logo()?>
+				<?php
+					// print wp_get_theme();exit;
+					if(strtolower(wp_get_theme()) != "wireframe") {
+						the_custom_logo();
+					} else {
+				?>
 					<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
+				<?php
+					} 
+				?>
+				
 				
 				<?php 
 
-					wf_show_widget('widge-1');
+					// wf_show_widget('widge-1');
 				
 				?>
 				
@@ -63,7 +72,7 @@
 			<div class="tagline-container gh-item">
 				<strong class="tagline"> 
 					<?php 
-						if (get_bloginfo( 'description', 'display' ) == "")
+						if (strtolower(wp_get_theme()) == "wireframe" || get_bloginfo('description','display')=="Just another WordPress site")
 							echo "Your Company Tagline Here";
 						else
 							echo get_bloginfo( 'description', 'display' ); 
@@ -81,8 +90,12 @@
 		</div><!-- end global-header-->
 
 		<header id="masthead" class="site-header" role="banner">
-
-		<img class="site-header" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+			
+			<?php if(strtolower(wp_get_theme()) != "wireframe"): ?>
+				<img class="site-header" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+			<?php else: ?>
+				<img class="site-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+			<?php endif; ?>
 		
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
 				<div class="navigation-top">
