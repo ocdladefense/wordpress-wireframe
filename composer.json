@@ -15,8 +15,7 @@
         }
     ],
     "require": {
-	    "php": "^7",
-        "wpackagist-plugin/custom-sidebars":"dev-trunk"
+	    "php": "^7"
     },
     "options":{
         "change-comment": "Most requires were properly part of the clickpdx/devenv repo.",
