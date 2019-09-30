@@ -68,8 +68,17 @@
 					<?php
 				}?>
 			</div>
+
 			
-			<div class="tagline-container gh-item gh-item-2">
+			
+			<div class="gh-middle-container gh-item gh-item-2">
+				<?php if ( has_nav_menu( 'top' ) ) : ?>
+					<div class="navigation-top gh-top-nav">
+						<div  id="cssmenu" class="wrap">
+							<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+						</div><!-- .wrap -->
+					</div><!-- .navigation-top -->
+				<?php endif; ?>
 				<strong class="tagline"> 
 					<?php 
 						if (strtolower(wp_get_theme()) == "wireframe" || get_bloginfo('description','display')=="Just another WordPress site")
@@ -98,7 +107,7 @@
 			<?php endif; ?>
 		
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
-				<div class="navigation-top">
+				<div class="navigation-top banner-top-nav">
 					<div  id="cssmenu" class="wrap">
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 					</div><!-- .wrap -->
@@ -139,6 +148,16 @@
 			<?php
 				}
 			?>
+		<div class="banner-tagline-container">
+				<strong class="tagline"> 
+					<?php 
+						if (strtolower(wp_get_theme()) == "wireframe" || get_bloginfo('description','display')=="Just another WordPress site")
+							echo "Your Company Tagline Here";
+						else
+							echo get_bloginfo( 'description', 'display' ); 
+					?>
+				</strong>
+			</div> <!--tagline-container-->
 		
 		<!--If a regular post or page, and not the front page, show the featured image.
 		Using get_queried_object_id() here since the $post global may not be set before a call to the_post().-->
