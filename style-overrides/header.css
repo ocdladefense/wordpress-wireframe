@@ -168,8 +168,10 @@ label {
 
 /* Global Header Menu */
 
-.gh-item-2{
+.gh-item-2 {
     margin-top: 10px;
+    margin-left: -70px;
+    vertical-align: text-top;
 }
 
 .gh-item-2 #cssmenu
@@ -184,6 +186,15 @@ label {
     padding: 0;
 }
 
+.gh-item-2 .navigation-top .gh-top-nav{
+    margin-left: -53px;
+}
+
+.gh-item-2 #cssmenu li a {
+    color: rgba(0,0,0,0.7);
+    padding: 0px 0px 0px 16px;
+}
+
 .gh-item-2 #cssmenu ul {
     background: transparent;
     padding: 0;
@@ -191,7 +202,7 @@ label {
 
 .gh-item-2 #cssmenu li a{
     color: black;
-    padding: 0px 13px 0px 30px;
+    padding: 0px 0px 0px 10px;
 }
 
 
