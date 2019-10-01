@@ -15,10 +15,11 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Prompt&display=swap" rel="stylesheet" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
 
 <?php wp_head(); ?>
 </head>
@@ -68,8 +69,17 @@
 					<?php
 				}?>
 			</div>
+
 			
-			<div class="tagline-container gh-item">
+			
+			<div class="gh-middle-container gh-item gh-item-2">
+				<?php if ( has_nav_menu( 'top' ) ) : ?>
+					<div class="navigation-top gh-top-nav">
+						<div  id="cssmenu" class="wrap">
+							<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+						</div><!-- .wrap -->
+					</div><!-- .navigation-top -->
+				<?php endif; ?>
 				<strong class="tagline"> 
 					<?php 
 						if (strtolower(wp_get_theme()) == "wireframe" || get_bloginfo('description','display')=="Just another WordPress site")
@@ -80,7 +90,7 @@
 				</strong>
 			</div> <!--tagline-container-->
 			
-			<div class="social-media-icon-container sidebar-2 gh-item gh-item-2 gh-widget-right">
+			<div class="social-media-icon-container sidebar-2 gh-item gh-item-3 gh-widget-right">
 				<?php if(!is_active_sidebar('global-header-right')): ?>
 						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
 						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" />
@@ -98,7 +108,7 @@
 			<?php endif; ?>
 		
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
-				<div class="navigation-top">
+				<div class="navigation-top banner-top-nav">
 					<div  id="cssmenu" class="wrap">
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 					</div><!-- .wrap -->
@@ -139,6 +149,16 @@
 			<?php
 				}
 			?>
+		<div class="banner-tagline-container">
+				<strong class="tagline"> 
+					<?php 
+						if (strtolower(wp_get_theme()) == "wireframe" || get_bloginfo('description','display')=="Just another WordPress site")
+							echo "Your Company Tagline Here";
+						else
+							echo get_bloginfo( 'description', 'display' ); 
+					?>
+				</strong>
+			</div> <!--tagline-container-->
 		
 		<!--If a regular post or page, and not the front page, show the featured image.
 		Using get_queried_object_id() here since the $post global may not be set before a call to the_post().-->

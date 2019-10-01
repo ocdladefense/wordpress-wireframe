@@ -21,9 +21,12 @@
     line-height:1.0em;
     vertical-align:middle;
 }
-
-
-
+.gh-item-1{
+    width:80%;
+}
+.gh-item-3{
+    width: 18%;
+}
 .admin-bar .global-header {
 	margin-top: 46px;
 }
@@ -39,7 +42,7 @@
         padding:1% 0 1% 0;
     }
     .gh-item-1{
-        width:80%;
+        width:75%;
     }
 }
 @media screen and (min-width:750px){
@@ -55,6 +58,9 @@
     }
     .admin-bar .global-header {
         margin-top: 32px;
+    }
+    .gh-item{
+        width:33%;
     }
 }
 
@@ -165,6 +171,7 @@ label {
 }
 
 /*Sidebar 2 (Social Media Icons)*/
+
 .mysocial a {
     box-shadow: none;
     color:blue;
@@ -176,19 +183,21 @@ label {
     padding:0px;
 }
 
-
-
-
 .social-media-icon-container {
 		text-align: right;
 }
-
-
 .mysocial {
 		padding-right:15%;
 }
-
 /*Banner Area*/
+.banner-tagline-container{
+    position: absolute;
+    top: 8%;
+    right: 54%; 
+}
+.banner-top-nav{
+    display: none;
+}
 .banner-widget-area{
 	text-align: center;
 }
@@ -233,4 +242,30 @@ label {
 		padding-left: 2%;
 		padding-right: 2%;
 	}
+}
+
+
+@media screen and (min-width:750px) {
+    .banner-widget-area-left {
+       position: absolute;
+    right: 0px;
+    width: 33%;
+    top: 250px;
+    right: 50px;
+    line-height: 2.0em; 
+    }
+
+    .banner-widget-area-left h2.widget-title {
+margin-bottom: 0.5em;
+    font-size: 4.0em;
+    color: #fff;
+    line-height: 1.0em;
+    text-rendering: optimizeLegibility;
+    text-shadow: -1px -1px 0 rgb(245,239,103), 1px -1px 0 rgb(245,239,103), -1px 1px 0 rgb(245,239,103), 1px 1px 0 rgb(245,239,103);
+    }
+
+    .banner-widget-area-left .textwidget {
+        font-size: 2.0em;
+    line-height: 1.3em;
+    }
 }
