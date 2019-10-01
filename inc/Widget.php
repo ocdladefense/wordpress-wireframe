@@ -10,10 +10,7 @@ class Widget extends WP_Widget {
 	private $data;
 	
 	private $widget_ops;
-<<<<<<< HEAD
-	
-=======
->>>>>>> 6d62686759af310559f5bfc308156bcfb4d44755
+
 
 	public function __construct($wid) {
 		parent::__construct( 'widgetfactory', 'Default Widget', $this->widget_ops );
