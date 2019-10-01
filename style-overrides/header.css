@@ -4,7 +4,7 @@
 	position: fixed;
 	width: 100%;
 	overflow-y:visible;
-    background-color: white;
+    background-color: transparent;
     display:inline-block;
     border-bottom: 1px solid #ccc;
     padding:1% 0 1% 0;
@@ -14,6 +14,17 @@
     vertical-align:middle;
 }
 
+#global-header{
+    transition: border-bottom-color 0.8s ease-out;
+    
+}
+
+.global-header {
+    background-color: transparent;
+    border-bottom-width: 1px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+}
 
 .gh-item {
     width:33%;
@@ -155,6 +166,35 @@ label {
     }
 }
 
+/* Global Header Menu */
+
+.gh-item-2{
+    margin-top: 10px;
+}
+
+.gh-item-2 #cssmenu
+{
+    width: max-content;
+    border: none;
+    z-index: 99;
+    margin: 0;
+}
+
+.gh-item-2 .navigation-top .wrap {
+    padding: 0;
+}
+
+.gh-item-2 #cssmenu ul {
+    background: transparent;
+    padding: 0;
+}
+
+.gh-item-2 #cssmenu li a{
+    color: black;
+    padding: 0px 13px 0px 30px;
+}
+
+
 
 /*TagLine*/
 .tagline-container{
@@ -188,6 +228,9 @@ label {
 }
 .mysocial {
 		padding-right:15%;
+}
+.tagline{
+    display: none;
 }
 /*Banner Area*/
 .banner-tagline-container{
