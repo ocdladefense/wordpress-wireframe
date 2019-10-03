@@ -1,0 +1,32 @@
+/**
+ * Styles for the Left and Right Sidebars.
+ * Defined in sidebar-left.php / sidebar-right.php
+ */
+
+.sidebar {
+	width: 14em;
+	border-style: dashed;
+	font-size: 12px;
+	display: none;
+	float: none;
+	vertical-align: top;
+}
+
+#primary {
+	float: none !important;
+	display: inline-block;
+}
+
+#sidebar-right {
+
+}
+
+#sidebar-left {
+
+}
+
+@media screen and (min-width:750px) {
+	.sidebar {
+		display:inline-block;
+	}
+}
