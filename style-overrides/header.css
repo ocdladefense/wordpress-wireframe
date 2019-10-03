@@ -205,6 +205,15 @@ label {
     padding: 0px 0px 0px 10px;
 }
 
+/*For small screen*/
+
+@media screen and (max-width:750px){
+
+    .gh-item-2{
+        display: none;
+    }
+}
+
 
 
 /*TagLine*/
@@ -238,7 +247,7 @@ label {
 		text-align: right;
 }
 .mysocial {
-		padding-right:15%;
+		padding-right:5%;
 }
 .tagline{
     display: none;
