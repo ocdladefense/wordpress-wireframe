@@ -20,12 +20,14 @@
 	</button>
 
 	<?php
-	wp_nav_menu(
-		array(
-			'theme_location' => 'top',
-			'menu_id'        => 'top-menu',
-		)
-	);
+	if(has_nav_menu('top')) {
+		wp_nav_menu(
+			array(
+				'theme_location' => 'top',
+				'menu_id'        => 'top-menu',
+			)
+		);
+	}
 	?>
 
 	<?php if ( ( wireframe_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>
