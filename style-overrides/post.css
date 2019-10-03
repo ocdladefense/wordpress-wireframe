@@ -130,8 +130,6 @@ body.page-two-column:not(.archive) #primary .entry-content{
 
 .single-post-page-wrap{
 	text-align: center;
-	padding-left: 10%;
-	padding-right: 10%;
 }
 
 .single-post:not(.has-sidebar) #primary{
