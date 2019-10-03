@@ -360,7 +360,31 @@ function wireframe_fonts_url() {
  */
 function wireframe_widgets_init() {
 
-
+	// Borrowed from wp-packagist/twentyseventeen.
+	register_sidebar(
+		array(
+			'name'          => __( 'Left Sidebar', 'wireframe' ),
+			'id'            => 'sidebar-1',
+			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	
+	register_sidebar(
+		array(
+			'name'          => __( 'Right Sidebar', 'wireframe' ),
+			'id'            => 'sidebar-2',
+			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	
 
 	register_sidebar(
 		array(
@@ -420,18 +444,7 @@ function wireframe_widgets_init() {
 		)
 	);
 	
-	// Borrowed from wp-packagist/twentyseventeen.
-	register_sidebar(
-		array(
-			'name'          => __( 'Blog Sidebar', 'wireframe' ),
-			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
+
 	
 	
 	register_sidebar(
@@ -467,28 +480,9 @@ function wireframe_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Interchangeable Widget Area #1', 'wireframe' ),
-			'id'            => 'sidebar-9',
-			'description'   => __( 'Widget intended to be used with the interchangeable widget content plugin.(sidebar-9)', 'wireframe' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Interchangeable Widget Area #2', 'wireframe' ),
-			'id'            => 'sidebar-10',
-			'description'   => __( 'Widget intended to be used with the interchangeable widget content plugin.(sidebar-10)', 'wireframe' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
+	
+	
+
 }
 
 function wireframe_init_widgets_install() {
