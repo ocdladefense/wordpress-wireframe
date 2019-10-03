@@ -60,7 +60,9 @@
     overflow-y:scroll;
 		position: absolute;
 	  background-color: #fff;
-	  top: 50px;
+    top: 5%;
+    left: 0;
+    width:80%;
   }
   .menu-main-menu-container .menu{
     padding-left:0px;
