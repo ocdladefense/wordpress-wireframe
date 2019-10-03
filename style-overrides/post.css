@@ -3,6 +3,13 @@ a.more-link {
 	text-decoration:none;
 	font-size:smaller;
 }
+.page-title{
+	font-size: 2em;
+}
+body:not(.has-sidebar):not(.page-one-column) .page-header{
+	float:none;
+	width:unset;
+}
 
 
 
@@ -130,6 +137,9 @@ body.page-two-column:not(.archive) #primary .entry-content{
 .single-post:not(.has-sidebar) #primary{
 	max-width: unset;
 	padding:3%;
+}
+.blog:not(.has-sidebar) #primary article{
+	width:unset;
 }
 
 @media screen and (max-width:750px){
