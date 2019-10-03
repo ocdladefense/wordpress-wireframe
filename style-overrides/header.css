@@ -64,9 +64,9 @@
         height: 85px;
         margin-top:6%;
     }
-    body:not(.home) .navigation-top{
+   /* body:not(.home) .navigation-top{
         margin-top:39%;
-    }
+    } */
     .admin-bar .global-header {
         margin-top: 32px;
     }
@@ -205,6 +205,15 @@ label {
     padding: 0px 0px 0px 10px;
 }
 
+/*For small screen*/
+
+@media screen and (max-width:750px){
+
+    .gh-item-2{
+        display: none;
+    }
+}
+
 
 
 /*TagLine*/
@@ -238,7 +247,7 @@ label {
 		text-align: right;
 }
 .mysocial {
-		padding-right:15%;
+		padding-right:5%;
 }
 .tagline{
     display: none;
@@ -249,7 +258,7 @@ label {
     top: 8%;
     right: 54%; 
 }
-.banner-top-nav{
+.banner-top-nav {
     display: none;
 }
 .banner-widget-area{

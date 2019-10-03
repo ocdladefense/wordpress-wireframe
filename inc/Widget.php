@@ -11,7 +11,6 @@ class Widget extends WP_Widget {
 	
 	private $widget_ops;
 
-
 	public function __construct($wid) {
 		parent::__construct( 'widgetfactory', 'Default Widget', $this->widget_ops );
 		$this->data = \get_option($wid, array() );
