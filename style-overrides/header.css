@@ -283,6 +283,17 @@ label {
 .site-header{
     width:fit-content;
 }
+.site-header{
+    height: 100vh;
+    width: unset;
+    object-fit: cover;
+}
+.banner-widget-area-left{
+    position: absolute;
+    top: 284px;
+    left: 27px;
+    width: 58%;
+}
 
 @media screen and (min-width:750px){
     .banner-widget-area {
@@ -292,21 +303,6 @@ label {
         padding-left: 48px;
     }
 }
-@media screen and (max-width:750px){
-    .site-header{
-        height: 100%;
-        width: unset;
-        object-fit: cover;
-    }
-    .banner-widget-area-left{
-        position: absolute;
-        top: 284px;
-        left: 27px;
-        width: 58%;
-    }
-}
-
-
 @media screen and (min-width: 48em) {
 	#global-header {
 		padding-left: 2%;
@@ -319,7 +315,7 @@ label {
     .banner-widget-area-left {
        position: absolute;
     right: 0px;
-    width: 33%;
+    width: 50%;
     top: 250px;
     right: 50px;
     line-height: 2.0em; 
