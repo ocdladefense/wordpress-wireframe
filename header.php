@@ -92,8 +92,8 @@
 			
 			<div class="social-media-icon-container sidebar-2 gh-item gh-item-3 gh-widget-right">
 				<?php if(!is_active_sidebar('global-header-right')): ?>
-						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" style="height:47px;" />
-						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" style="height:47px;" />
+						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-facebook-icon.png" />
+						<img class="default-social" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-twitter-icon.png" />
 				<?php else: dynamic_sidebar( 'global-header-right' ); endif; ?>
 			</div>
 			
