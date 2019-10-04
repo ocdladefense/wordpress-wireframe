@@ -18,19 +18,28 @@ function load_site(){
 }
 
 // print load_site();exit;
+function getSiteValue($arr, $keys) {
 
-function confget() {
+	$keyc = array_shift($keys);
+	
+	if(!empty($arr[$keyc])) {
+		if(!is_array($arr[$keyc])) return $arr[$keyc];
+		else return getJsonValue($arr[$keyc],$keys);
+	}
+	
+	else return null;
+}
+
+
+function confget($key) {
 	static $json;
+	$keys = explode(".",$key);
+	
+	
 	
 	if(empty($json)) {
 		$json = load_site();
 	}
 	
-	if(null == $json) return '';
-	
-	$val = $json['global-header']['css']['background-color'];
-	
-	// print $val;
-	// exit;
-	return $val;
+	return null == $json ? '' : getSiteValue($json, $keys);
 }

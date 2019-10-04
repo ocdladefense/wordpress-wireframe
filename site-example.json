@@ -1,7 +1,19 @@
 {
+	"background-color":"#000",
+	"color":"#fff",
 	"global-header":{
 		"css":{
-			"background-color":"#fff"
+			"background-color":"#000",
+			"color":"rgba(255,255,255,0.8)"
 		}
-	}
+	},
+	"site-content":{
+		"css":{
+			"background-color":"#000",
+			"color":"#fff"
+		}
+	},
+	"comments":[
+		{"Note":"Represent an design instance as JSON."}
+	]
 }

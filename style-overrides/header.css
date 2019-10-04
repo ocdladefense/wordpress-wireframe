@@ -121,7 +121,6 @@ label {
     .search-form .search-field {
         background: none;
         border-style: solid;
-        border-color: black;
         border-radius: 25px;
         width: 300px;
     }
@@ -191,7 +190,6 @@ label {
 }
 
 .gh-item-2 #cssmenu li a {
-    color: rgba(0,0,0,0.7);
     padding: 0px 0px 0px 16px;
 }
 
@@ -201,7 +199,6 @@ label {
 }
 
 .gh-item-2 #cssmenu li a{
-    color: black;
     padding: 0px 0px 0px 10px;
 }
 

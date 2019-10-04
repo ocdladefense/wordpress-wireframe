@@ -29,7 +29,7 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wireframe' ); ?></a>
 		
 
-		<div id="global-header" style="background-color:<?php echo confget(); ?>;" class="flex-container global-header" ><!--global-header-->
+		<div id="global-header" style="background-color:<?php echo confget('background-color'); ?>;" class="flex-container global-header" ><!--global-header-->
 
 			<div class="gh-item gh-item-1">
 				<!--MAIN NAVIGATION-->
@@ -170,5 +170,5 @@
 		endif;
 		?>
 
-		<div class="site-content-contain">
-			<div id="content" class="site-content">
+		<div class="site-content-contain" style="background-color:<?php echo confget('content--background-color'); ?>;">
+			<div id="content" style="background-color:<?php print confget('background-color'); ?>; color:<?php print confget('color'); ?>;" class="site-content">
