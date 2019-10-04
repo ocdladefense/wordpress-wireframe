@@ -29,7 +29,7 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wireframe' ); ?></a>
 		
 
-		<div id="global-header" class="flex-container global-header" ><!--global-header-->
+		<div id="global-header" style="background-color:<?php echo confget(); ?>;" class="flex-container global-header" ><!--global-header-->
 
 			<div class="gh-item gh-item-1">
 				<!--MAIN NAVIGATION-->

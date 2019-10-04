@@ -17,6 +17,7 @@ require($path1);
 require($path2);
 require($path3);
 require($path4);
+require(get_template_directory() .'/inc/site.inc');
 
 
 
@@ -33,6 +34,8 @@ $wign = new Widget('my-widget-id');
 // Save the widget into the sidebar.
 // $sidebar->addWidget($wign);
 // $sidebar->save();
+
+
 
 
 
@@ -88,12 +91,12 @@ function wireframe_setup() {
 	// This theme uses wp_nav_menu() in five locations.
 	register_nav_menus(
 		array(
-			'top' => __( 'Top Menu (Short list of key pages located at the top of the page.)', 'wireframe' ),
-			'main' => __('Main Menu (Located in the global-header)', 'wireframe'),
-			'menu1' => __('Menu #1', 'wireframe' ),
-			'menu2' => __('Menu #2', 'wireframe'),
-			'menu3' => __('Menu #3', 'wireframe'),
-			'social' => __( 'Social Links Menu', 'wireframe' ),
+			'top' => __('Global Header', 'wireframe'),
+			'main' => __('Hamburgler', 'wireframe'),
+			'menu-loc-1' => __('Location 1', 'wireframe'),
+			'menu-loc-2' => __('Location 2', 'wireframe'),
+			'menu-loc-3' => __('Location 3', 'wireframe'),
+			'social' => __('Social Links Menu', 'wireframe'),
 			'site-map' => __('Site Map', 'wireframe')
 		)
 	);
@@ -358,6 +361,7 @@ function wireframe_fonts_url() {
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
+
 function wireframe_widgets_init() {
 
 	// Borrowed from wp-packagist/twentyseventeen.
@@ -498,7 +502,10 @@ function wf_show_widget($name = null) {
 	$widgewf->widget();
 }
 
-add_action( 'widgets_init', 'wireframe_widgets_init' );
+
+if(!function_exists('override_parent_widget_areas')) {
+	add_action( 'widgets_init', 'wireframe_widgets_init' );
+}
 add_action( 'widgets_init', 'wireframe_init_widgets_install' );
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
