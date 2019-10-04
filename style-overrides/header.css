@@ -231,7 +231,9 @@ label {
 }
 
 /*Sidebar 2 (Social Media Icons)*/
-
+.default-social{
+    height: 24px;
+}
 .mysocial a {
     box-shadow: none;
     color:blue;
@@ -295,7 +297,9 @@ label {
 }
 @media screen and (max-width:750px){
     .site-header{
-        margin-top:17px;
+        height: 100%;
+        width: unset;
+        object-fit: cover;
     }
 }
 
