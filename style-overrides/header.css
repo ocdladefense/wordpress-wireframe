@@ -298,6 +298,12 @@ label {
         width: unset;
         object-fit: cover;
     }
+    .banner-widget-area-left{
+        position: absolute;
+        top: 284px;
+        left: 27px;
+        width: 58%;
+    }
 }
 
 
