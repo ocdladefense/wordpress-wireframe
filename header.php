@@ -33,7 +33,7 @@
 
 			<div class="gh-item gh-item-1">
 				<!--MAIN NAVIGATION-->
-				<?php if ( has_nav_menu( 'main' ) ) : ?>
+				<?php if(false && has_nav_menu('main')): ?>
 					<div class="navigation-main">
 						<div class="wrap">
 							<?php get_template_part( 'template-parts/navigation/navigation', 'main' );?>
@@ -73,7 +73,7 @@
 			
 			
 			<div class="gh-middle-container gh-item gh-item-2">
-				<?php if ( has_nav_menu( 'top' ) ) : ?>
+				<?php if (false&&has_nav_menu( 'top' ) ) : ?>
 					<div class="navigation-top gh-top-nav">
 						<div  id="cssmenu" class="wrap">
 							<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
@@ -99,12 +99,18 @@
 			
 		</div><!-- end global-header-->
 
+
+
+
+
+
+
 		<header id="masthead" class="site-header" role="banner">
 			
 			<?php if(strtolower(wp_get_theme()) != "wireframe"): ?>
-				<img class="site-header" src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php else: ?>
-				<img class="site-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php endif; ?>
 		
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
@@ -115,41 +121,34 @@
 				</div><!-- .navigation-top -->
 			<?php endif; ?>
 
-			
 
-			
-		</header><!-- #masthead -->
 
-		<!--BANNER WIDGET AREAS--> 
-		<!--Left Banner Widget Area -->
-		<?php
-			if ( is_active_sidebar( 'sidebar-3' ) ) {?>
+
+			<!--BANNER WIDGET AREAS--> 
+			<!--Left Banner Widget Area -->
+			<?php if(is_active_sidebar('sidebar-3')): ?>
 				<div class="widget-column banner-widget-area-left">
 					<?php dynamic_sidebar( 'sidebar-3' ); ?>
 				</div>
-			<?php
-				}
-			?>
+			<?php endif; ?>
 
-		<!--Center Banner Widget Area -->
-		<?php
-			if ( is_active_sidebar( 'sidebar-4' ) ) {?>
-				<div class="widget-column banner-widget-area-center">
+			<!--Center Banner Widget Area -->
+			<?php if(is_active_sidebar('sidebar-4')): ?>
+				<div class="widget-column banner-widget-area-left">
 					<?php dynamic_sidebar( 'sidebar-4' ); ?>
 				</div>
-			<?php
-				}
-			?>
-		<!--Right Banner Widget Area -->
-		<?php
-			if ( is_active_sidebar( 'sidebar-5' ) ) {?>
-				<div class="widget-column banner-widget-area-right">
+			<?php endif; ?>
+		
+		
+			<!--Right Banner Widget Area -->
+			<?php if(is_active_sidebar('sidebar-5')): ?>
+				<div class="widget-column banner-widget-area-left">
 					<?php dynamic_sidebar( 'sidebar-5' ); ?>
 				</div>
-			<?php
-				}
-			?>
-		<div class="banner-tagline-container">
+			<?php endif; ?>
+		
+		
+			<div class="banner-tagline-container">
 				<strong class="tagline"> 
 					<?php 
 						if (strtolower(wp_get_theme()) == "wireframe" || get_bloginfo('description','display')=="Just another WordPress site")
@@ -159,6 +158,23 @@
 					?>
 				</strong>
 			</div> <!--tagline-container-->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</header><!-- #masthead -->
+
+		
 		
 		<!--If a regular post or page, and not the front page, show the featured image.
 		Using get_queried_object_id() here since the $post global may not be set before a call to the_post().-->
@@ -170,5 +186,5 @@
 		endif;
 		?>
 
-		<div class="site-content-contain" style="background-color:<?php echo confget('content--background-color'); ?>;">
-			<div id="content" style="background-color:<?php print confget('background-color'); ?>; color:<?php print confget('color'); ?>;" class="site-content">
+		<div class="site-content-contain" style="background-color:<?php echo confget('background-color'); ?>;color:<?php confget('color'); ?>;">
+			<div id="content" class="site-content">

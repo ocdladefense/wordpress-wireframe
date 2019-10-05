@@ -1,7 +1,10 @@
 <?php
 
 function load_site(){
-	$file = get_template_directory().'/site.json';
+	$searchdir = !file_exists(get_stylesheet_directory().'/site.json') ? get_template_directory() : get_stylesheet_directory();
+	
+	
+	$file = $searchdir.'/site.json';
 	
 	if(!file_exists($file)) {
 		return null;

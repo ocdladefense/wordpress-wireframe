@@ -26,15 +26,7 @@ body{
 
 @media screen and (min-width:750px){
 	/*Global Header Styles*/
-	.global-header {
-		padding:11px;
-	}
-	
 
-	.admin-bar .global-header {
-		margin-top: 32px;
-	}
-	
 	.site-content {
 		margin: 0 auto;
 		max-width:80%;
@@ -45,16 +37,7 @@ body{
 		padding-right:5%;
 	}
 	
-	.site-header {
-		height: 760px;
-		text-align:center;
-		width:100% !important;
-	}
-	
-	.site-header > div {
-		max-width:80%;
-		margin:0 auto;
-	}
+
 	body:not(.home) .site-header{
 			height: 85px;
 	}
@@ -67,63 +50,5 @@ body{
 		text-align: center;
 	}
 
-	/*Sidebars*/
-.ocdla-sidebar, #primary.single-post{
-			display: inline-block;
-			border-style: none;
-	}
-	body.page-two-column:not(.archive) #primary .entry-header{
-			float:none;
-			width:auto;
-	}
-	.basic-page{
-			padding:0px 75px 0px 75px;
-	}
-	/*Home page menus*/
-	.homePageMenus{
-			width: 70%;
-			margin: 0 auto;
-			max-width: 1045px;
-			margin-top: 8%;
-			margin-bottom: 8%;
-	}
-	.trevor-menu ul{
-			column-count: 2;
-			margin: 0 auto;
-			margin-top: 2%;
-	}
-	.trevor-resources-menus{
-			display:inline-block;
-	}
-	.homepage-menu-column{
-			width:45%;
-			display:inline-block;
-	}
-	.trevor-about-menu-label{
-			width:190px;
-	}
-	.trevor-members-menu-label{
-			width:130px;
-	}
-	.trevor-resources-menu-label{
-			width:330px;
-	}
-	/*Post styles*/
-	.trevor-posts article {
-		display: inline-block;
-		width:100%;
-		vertical-align: top;
-		margin-top:80px;
-	}
-	.trevor-posts .wp-block-image figure.alignleft{
-		margin-right:0;
-	}
-
-
-	
-	/*Footer Styles*/
-	.site-info{
-		font-size: 17px;
-	}
 
 }

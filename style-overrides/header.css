@@ -1,64 +1,87 @@
 /*Styles for the global-header and banner area*/
 /*Global Header Element*/
-.global-header{
+.global-header {
 	position: fixed;
 	width: 100%;
 	overflow-y:visible;
-    background-color: transparent;
-    display:inline-block;
-    border-bottom: 1px solid #ccc;
-    padding:1% 0 1% 0;
+	background-color: transparent;
+	display:inline-block;
+	border-bottom: 1px solid #ccc;
+	padding:1% 0 1% 0;
 	top:0;
-    left:0;
-    z-index: 9999;
-    vertical-align:middle;
+	left:0;
+	z-index: 9999;
+	vertical-align:middle;
 }
 
-#global-header{
-    transition: border-bottom-color 0.8s ease-out;
-    
+#global-header {
+	transition: border-bottom-color 0.8s ease-out;
 }
 
 .global-header {
-    background-color: transparent;
-    border-bottom-width: 1px;
-    border-bottom-color: transparent;
-    border-bottom-style: solid;
+	background-color: transparent;
+	border-bottom-width: 1px;
+	border-bottom-color: transparent;
+	border-bottom-style: solid;
 }
 
 .gh-item {
-    width:33%;
-    display: inline-block;
-    line-height:1.0em;
-    vertical-align:middle;
+	width:33%;
+	display: inline-block;
+	line-height:1.0em;
+	vertical-align:middle;
 }
-.gh-item-1{
-    width:80%;
+
+.gh-item-1 {
+	width:80%;
 }
+
 .gh-item-3{
-    width: 18%;
+	width: 18%;
 }
+
 .admin-bar .global-header {
 	margin-top: 46px;
 }
+
 .site-navigation-fixed .global-header {
 	height:100%;
 	overflow:hidden;
 }
-@media screen and (max-width: 750px) {
-    #wpadminbar {
-		position:fixed;
-    }
-    .global-header{
-        padding:1% 0 1% 0;
-    }
-    .gh-item-1{
-        width:75%;
-    }
+
+
+.site-header {
+	height: 100vh;
+	/* width: fit-content; */
+	/* object-fit: cover; */
+	overflow-x: hidden;
+	max-width:100%;
 }
+
+.site-header img {
+	width: 260%;
+	height: 100%;
+}
+
+
+
+
+
+@media screen and (max-width: 750px) {
+	#wpadminbar {
+		position:fixed;
+	}
+	.global-header {
+		padding:1% 0 1% 0;
+	}
+}
+
 @media screen and (min-width:750px){
-    .global-header{
+    .global-header {
         justify-content: unset;
+    }
+    .gh-item-1 {
+    	width:33%;
     }
     body:not(.home) #masthead{
         height: 85px;
@@ -70,9 +93,10 @@
     .admin-bar .global-header {
         margin-top: 32px;
     }
-    .gh-item{
-        width:33%;
-    }
+		
+	.site-header img {
+		width: 100%;
+	}
 }
 
 /*Custom Logo*/
@@ -280,15 +304,13 @@ label {
 .banner-widget-area ul li:last-child{
 	border-right: none;
 }
-.site-header{
-    width:fit-content;
-}
-.site-header{
-    height: 100vh;
-    width: unset;
-    object-fit: cover;
-}
-.banner-widget-area-left{
+
+
+
+
+
+
+.banner-widget-area-left {
     position: absolute;
     top: 284px;
     left: 27px;
@@ -296,12 +318,12 @@ label {
 }
 
 @media screen and (min-width:750px){
-    .banner-widget-area {
-        text-align: center;
-        width: 300px;
-        display: inline-block;
-        padding-left: 48px;
-    }
+	.banner-widget-area {
+			text-align: center;
+			width: 300px;
+			display: inline-block;
+			padding-left: 48px;
+	}
 }
 @media screen and (min-width: 48em) {
 	#global-header {
@@ -313,25 +335,25 @@ label {
 
 @media screen and (min-width:750px) {
     .banner-widget-area-left {
-       position: absolute;
-    right: 0px;
-    width: 50%;
-    top: 250px;
-    right: 50px;
-    line-height: 2.0em; 
+			position: absolute;
+			right: 0px;
+			width: 50%;
+			top: 250px;
+			right: 50px;
+			line-height: 2.0em; 
     }
 
     .banner-widget-area-left h2.widget-title {
-margin-bottom: 0.5em;
-    font-size: 4.0em;
-    color: #fff;
-    line-height: 1.0em;
-    text-rendering: optimizeLegibility;
-    text-shadow: -1px -1px 0 rgb(245,239,103), 1px -1px 0 rgb(245,239,103), -1px 1px 0 rgb(245,239,103), 1px 1px 0 rgb(245,239,103);
+			margin-bottom: 0.5em;
+			font-size: 4.0em;
+			color: #fff;
+			line-height: 1.0em;
+			text-rendering: optimizeLegibility;
+			text-shadow: -1px -1px 0 rgb(245,239,103), 1px -1px 0 rgb(245,239,103), -1px 1px 0 rgb(245,239,103), 1px 1px 0 rgb(245,239,103);
     }
 
     .banner-widget-area-left .textwidget {
-        font-size: 2.0em;
-    line-height: 1.3em;
+			font-size: 2.0em;
+			line-height: 1.3em;
     }
 }
