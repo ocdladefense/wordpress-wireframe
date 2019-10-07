@@ -13,9 +13,14 @@
 
 
 
-.menu ul {
+.menu ul,
+.widget_nav_menu ul {
 	padding:0;
 	margin:0;
+}
+
+.menu li ul {
+	padding-left:1.0em;
 }
 .menu a {
 	color:inherit;
@@ -25,14 +30,15 @@
 	color:rgba(0,0,0,0.6);
 }
 
-/* Basic menu.  Default is horizontal/drop-down */
+/* Basic menu.  Default is vertical/flyout */
 .menu li, .menu.default li {
 	display:block;
 	font-size:0.7em;
 	border:1px solid transparent;
-	text-align:right;
+	text-align:left;
 	font-weight:600;
 	text-rendering:optimizeLegibility;
+	position:relative;
 }
 
 .menu li:hover {
@@ -69,3 +75,39 @@
 	display:inline-block;
 	text-align:center;
 }
+
+
+.menu-item-has-children {
+	position:relative; /*default user-agent css*/
+}
+
+.menu-item-has-children:hover .sub-menu {
+	display:block;
+}
+
+
+
+.sub-menu {
+	display:none;
+	position:absolute;
+	top:0px;
+	right:0px;
+	margin-left:100%;
+	position: absolute;
+	top: 0px;
+	left: 110%;
+	width: 400px; /* hack */
+	width: 100%; /* ok... of what? */
+	background-color: inherit;
+}
+
+.sub-menu .sub-menu {
+	display:none;
+}
+
+
+/** hack - should be in child theme **/
+#sidebar-left .menu li {
+	background-color:#ccc; /* grey */
+}
+

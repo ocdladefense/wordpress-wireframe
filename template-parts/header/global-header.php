@@ -15,8 +15,8 @@
 
 				<!--CUSTOM LOGO-->
 				<?php
-					// print wp_get_theme();exit;
-					if(strtolower(wp_get_theme()) != "wireframe") {
+					// 
+					if(strtolower(wp_get_theme()) != "wireframe" && false) {
 						the_custom_logo();
 					} else {
 				?>

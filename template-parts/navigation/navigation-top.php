@@ -21,6 +21,7 @@
 
 	<?php
 	if(has_nav_menu('top')) {
+		echo "<h3>Hello World!</h3>";
 		wp_nav_menu(
 			array(
 				'theme_location' => 'top',

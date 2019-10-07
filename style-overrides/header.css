@@ -5,6 +5,10 @@
 	display:none;
 }
 
+.default-logo-image {
+	vertical-align:middle;
+}
+
 .global-header {
 	position: fixed;
 	width: 100%;
@@ -167,6 +171,7 @@ label {
     font-weight: 800;
     margin-bottom: 0em;
 }
+
 .search-widget-style{
     display: inline-block;
 }
@@ -197,10 +202,8 @@ label {
 }
 
 @media screen and (min-width:750px){
-    .search-form .search-field {
-        width: 300px;
-    }
     .global-header .search-submit {
+    	display:none;
         width: 46px;
         right: 1px;
         top:3px;

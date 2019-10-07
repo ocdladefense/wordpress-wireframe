@@ -27,12 +27,17 @@ body {
 }
 
 
+body:not(.home) h1.entry-title {
+	margin-top:0px;
+}
+
+
 @media screen and (min-width:750px){
 	/*Global Header Styles*/
 
 	.site-content {
 		margin: 0 auto;
-		max-width:80%;
+		max-width:95%;
 	}
 	
 	.wireframe-front-page .site-content {
