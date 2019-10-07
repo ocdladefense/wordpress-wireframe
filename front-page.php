@@ -74,11 +74,7 @@ get_header(); ?>
 		
 		<?php endif; ?>		
 		
-<!-- 
-		<div class="menuImage" id="menuImage">
-			<img class="theImg default-icon-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/Capture.PNG" />
-		</div> -->
-		<h1 class="announcments-label">Recent News</h1>
+
 		<div class="trevor-posts-container">
 			<div class="trevor-posts" >
 				<div id="primary" class="content-area">

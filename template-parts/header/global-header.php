@@ -42,13 +42,9 @@
 				}?>
 			</div>
 
-			<div class="gh-item gh-item-2 gh-middle-container ">
+			<div class="gh-item gh-item-2 gh-middle-container">
 				<?php if(has_nav_menu('top')): ?>
-					<div class="navigation-top gh-top-nav">
-						<div  id="cssmenu" class="wrap">
-							<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-						</div><!-- .wrap -->
-					</div><!-- .navigation-top -->
+					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 				<?php endif; ?>
 				<strong class="tagline"> 
 					<?php 

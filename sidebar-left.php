@@ -14,6 +14,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="sidebar-left" class="ocdla-sidebar widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Left Sidebar', 'wireframe' ); ?>">
+<aside id="sidebar-left" class="sidebar widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Left Sidebar', 'wireframe' ); ?>">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

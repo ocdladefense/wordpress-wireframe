@@ -36,7 +36,9 @@ $wign = new Widget('my-widget-id');
 // $sidebar->save();
 
 
-
+function is_inner_page() {
+	return is_single() || (is_page() && ! wireframe_is_frontpage());
+}
 
 
 /**
@@ -838,6 +840,7 @@ if(!function_exists('override_base_stylesheets')) {
 		$styles = array(
 			'general-overrides' => 'style.css',
 			'structure-overrides' => 'structure.css',
+			'sidebar-overrides' => 'sidebar.css',
 			'header-overrides' => 'header.css',
 			'menu-overrides' => 'menu.css',
 			'post-overrides' => 'post.css',
