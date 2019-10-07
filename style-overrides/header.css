@@ -1,21 +1,26 @@
 /*Styles for the global-header and banner area*/
 /*Global Header Element*/
+
+.skip-link {
+	display:none;
+}
+
 .global-header {
 	position: fixed;
 	width: 100%;
 	overflow-y:visible;
-	background-color: transparent;
 	display:inline-block;
 	border-bottom: 1px solid #ccc;
-	padding:1% 0 1% 0;
+	padding: 1% 2%;
 	top:0;
 	left:0;
-	z-index: 9999;
-	vertical-align:middle;
+	z-index: 101;
+	background-color: rgba(255,255,255,0.3);
 }
 
 #global-header {
 	transition: border-bottom-color 0.8s ease-out;
+	transition: background-color 0.4s ease-out;
 }
 
 .global-header {
@@ -25,10 +30,17 @@
 	border-bottom-style: solid;
 }
 
+.scrollToDark {
+	background-color:rgba(255,255,255,0.9);
+	border-bottom-color: rgba(0,0,0,0.3);
+}
+
+
+
 .gh-item {
 	width:33%;
 	display: inline-block;
-	line-height:1.0em;
+	line-height:10px;
 	vertical-align:middle;
 }
 
@@ -36,8 +48,26 @@
 	width:80%;
 }
 
+.gh-item-2 {
+	display:none;
+}
+
 .gh-item-3{
 	width: 18%;
+}
+
+
+
+
+@media screen and (min-width:800px) {
+
+	.gh-item-1,
+	.gh-item-2,
+	.gh-item-3 {
+		display:inline-block;
+		width: 33%;
+	}
+
 }
 
 .admin-bar .global-header {
@@ -50,11 +80,17 @@
 }
 
 
+
+.single-post img.logo-overlay {
+	display:none;
+}
+
 .site-header {
 	height: 100vh;
 	/* width: fit-content; */
 	/* object-fit: cover; */
 	overflow-x: hidden;
+	overflow-y: hidden;
 	max-width:100%;
 }
 
@@ -71,18 +107,13 @@
 	#wpadminbar {
 		position:fixed;
 	}
-	.global-header {
-		padding:1% 0 1% 0;
-	}
 }
 
 @media screen and (min-width:750px){
     .global-header {
         justify-content: unset;
     }
-    .gh-item-1 {
-    	width:33%;
-    }
+
     body:not(.home) #masthead{
         height: 85px;
         margin-top:6%;
@@ -93,21 +124,18 @@
     .admin-bar .global-header {
         margin-top: 32px;
     }
-		
-	.site-header img {
-		width: 100%;
-	}
 }
 
-/*Custom Logo*/
-@media screen and (max-width:750px){
-    .custom-logo-link img{
-        height: 24px;
-    }
-    .custom-logo-link{
-        margin:0 1% 0 1%;
-    }
+
+
+
+.custom-logo-link img{
+		height: 24px;
 }
+.custom-logo-link{
+		margin:0 1% 0 1%;
+}
+
 @media screen and (min-width:750px){
     .custom-logo-link{
         margin: 0 2% 0 2%;
@@ -141,99 +169,57 @@ label {
 .global-header .search-field::placeholder{
     color:black;
 }
+
+
+.search-field::placeholder {
+	color:rgba(0,0,0,0.4);
+}
+.search-form .search-field {
+	background: none;
+	border:1px solid #eee;
+	border-radius:5px;
+	padding: 5px;
+}
+.global-header .search-submit {
+	padding-right:40px;
+	background-color: transparent;
+	
+}
+.search-icon{
+	height:27px;
+	position: absolute;
+	right: -15px;
+	top:0.3px;
+}
+
 @media screen and (min-width:750px){
     .search-form .search-field {
-        background: none;
-        border-style: solid;
-        border-radius: 25px;
         width: 300px;
     }
     .global-header .search-submit {
         width: 46px;
         right: 1px;
         top:3px;
-        background-position: center;
-        background-size: 91px;
-        background-color: transparent;
     }
 }
-@media screen and (max-width:750px){
-    .search-form .search-field {
-        background: none;
-        border-style: solid;
-        border-color: black;
-        border-radius: 25px;
-        width: 175px;
-        height:25px;
-    }
-    .global-header .search-submit{
-        border-radius: 41px;
-        right: 2px;
-        top: -1px;
-        padding: 14px 0px 14px 28px;
-        background-position-x: -9px;
-        background-position-y: .5px;
-        background-size: 52px;
-        background-color: transparent;
-    }
-    .search-icon{
-        height:27px;
-        position: absolute;
-        right: -15px;
-        top:0.3px;
-    }
-}
-@media screen and (min-width:750px){
-    .global-header{
-        display: inline-block;
-    }
-}
+
 
 /* Global Header Menu */
-
+/*
 .gh-item-2 {
     margin-top: 10px;
     margin-left: -70px;
     vertical-align: text-top;
 }
+*/
 
-.gh-item-2 #cssmenu
-{
-    width: max-content;
-    border: none;
-    z-index: 99;
-    margin: 0;
-}
 
-.gh-item-2 .navigation-top .wrap {
-    padding: 0;
-}
 
-.gh-item-2 .navigation-top .gh-top-nav{
-    margin-left: -53px;
-}
 
-.gh-item-2 #cssmenu li a {
-    padding: 0px 0px 0px 16px;
-}
 
-.gh-item-2 #cssmenu ul {
-    background: transparent;
-    padding: 0;
-}
 
-.gh-item-2 #cssmenu li a{
-    padding: 0px 0px 0px 10px;
-}
 
-/*For small screen*/
 
-@media screen and (max-width:750px){
-
-    .gh-item-2{
-        display: none;
-    }
-}
 
 
 
@@ -275,6 +261,10 @@ label {
 .tagline{
     display: none;
 }
+
+
+
+
 /*Banner Area*/
 .banner-tagline-container{
     position: absolute;
@@ -306,9 +296,24 @@ label {
 }
 
 
+img.logo-overlay {
+	position:absolute;
+	top: 0px;
+	width: 100%;
+	background-color:rgba(25,25,25,0.6);
+}
+
+@media screen and (min-width:800px) {
+	img.logo-overlay {
+		max-width:25%;
+	}
+}
 
 
 
+#masthead .widget-area {
+	display:none;
+}
 
 .banner-widget-area-left {
     position: absolute;
@@ -356,4 +361,10 @@ label {
 			font-size: 2.0em;
 			line-height: 1.3em;
     }
+}
+
+
+
+.search-form label {
+	display:none;
 }

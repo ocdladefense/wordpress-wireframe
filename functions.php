@@ -863,3 +863,14 @@ function wireframe_has_menu_content(){
 	
 	return false;
 }
+
+
+
+function wireframe_get_template_part($slug, $name=null) {
+	$file = null == $name ? $slug : $slug.'-'.$name;
+	$path = get_template_directory().'/'.$file.'.php';
+	if(!file_exists($path)) {
+		throw new Exception('Could not locate template file: '.$path);
+	}
+	get_template_part($slug,$name);
+}

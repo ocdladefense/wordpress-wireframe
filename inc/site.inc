@@ -27,7 +27,7 @@ function getSiteValue($arr, $keys) {
 	
 	if(!empty($arr[$keyc])) {
 		if(!is_array($arr[$keyc])) return $arr[$keyc];
-		else return getJsonValue($arr[$keyc],$keys);
+		else return getSiteValue($arr[$keyc],$keys);
 	}
 	
 	else return null;

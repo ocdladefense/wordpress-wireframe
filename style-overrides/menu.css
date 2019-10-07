@@ -87,17 +87,12 @@
 	}
 }
 
-/*Top Menu Styles (Navigation in the banner area) in Widescreen*/
+/*Top Menu Styles (Navigation in Global Header) in Widescreen*/
 #top-menu{
 	position: relative;
   z-index: 999;
 }
 .navigation-top {
-	position: static;
-	top: auto;
-	bottom:auto;
-	left:auto;
-	right:auto;
 	background: none;
 	border: none;
 }
@@ -146,26 +141,38 @@
 	list-style:none;
 }
 
-.site-navigation-fixed.navigation-top {
-	position:static;
-}
 
 .admin-bar .site-navigation-fixed.navigation-top {
 	top:auto;
 }
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@charset "UTF-8";
+
 /* Base Styles */
-#cssmenu ul,
-#cssmenu li,
-#cssmenu a {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  line-height: 1;
-  font-family: 'Lato', sans-serif;
+#cssmenu
+{
+    width: max-content;
+    border: none;
+    z-index: 99;
+    margin: 0;
 }
+
+.navigation-top .wrap {
+    padding: 0;
+}
+
+#cssmenu li a {
+    padding: 0px 0px 0px 16px;
+}
+
+#cssmenu ul {
+    background: transparent;
+    padding: 0;
+}
+
+#cssmenu li a {
+    padding: 0px 0px 0px 10px;
+}
+
+
 #cssmenu {
   border: 1px solid #133e40;
   -webkit-border-radius: 5px;
@@ -261,12 +268,7 @@
   -webkit-box-shadow: inset 0 5px 10px #133e40;
   box-shadow: inset 0 5px 10px #133e40;
 }
-#cssmenu{
-    width:fit-content;
-    border:none;
-    z-index: 99;
-    margin-top:-56%;
-}
+
 .main{
   display:none;
 }

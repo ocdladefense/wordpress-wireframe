@@ -18,9 +18,7 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
-				<?php
-				if ( has_nav_menu( 'social' ) ) :
-					?>
+				<?php if(has_nav_menu( 'social' ) ): ?>
 					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'wireframe' ); ?>">
 						<?php
 							wp_nav_menu(
@@ -34,23 +32,26 @@
 							);
 						?>
 					</nav><!-- .social-navigation -->
-					<?php
-				endif;
+				<?php endif; ?>
 
+				<?php 
+					wireframe_get_template_part('template-parts/footer/widgets','left');
+
+					if(!has_nav_menu('site-map'))
+						wireframe_get_template_part( 'template-parts/footer/site-info','default' );
+					if(has_nav_menu('site-map')):
+				?>
+					<strong class="site-map-label">Site Map</strong>
 				
-				get_template_part('template-parts/footer/footer', 'widgetLeft');
-
-				if(!has_nav_menu('site-map'))
-					get_template_part( 'template-parts/footer/site', 'infoDefault' );
-				if(has_nav_menu('site-map')){
-					?><strong class="site-map-label">Site Map</strong><?php
-					wp_nav_menu('site-map');
-				}
-				get_template_part('template-parts/footer/footer', 'widgetRight');
-			?>
+				<?php wp_nav_menu('site-map'); endif;
+					wireframe_get_template_part('template-parts/footer/widgets', 'right');
+				?>
 			</div><!-- .wrap -->
+			
 		</footer><!-- #colophon -->
+		
 	</div><!-- .site-content-contain -->
+	
 </div><!-- #page -->
 <?php wp_footer(); ?>
 

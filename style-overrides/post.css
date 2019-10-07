@@ -32,12 +32,25 @@ body.page-two-column:not(.archive) #primary .entry-content{
 	float: none;
 }
 
+.entry-meta {
+	display:none;
+}
+
 .announcement-image img{
 	width:200px;
 }
 
-.wp-block-image figure.alignleft{
-	margin:0;
+
+
+@media screen and (max-width: 800px) {
+	.wp-block-image figure,
+	.wp-block-image figure.alignLeft,
+	.wp-block-image figure.alignRight {
+		display: block !important;
+		float:none !important;
+		margin-right:0 !important;
+		margin-left:0 !important;
+	}
 }
 
 .trevor-posts .wp-block-image figure.alignleft{
@@ -128,9 +141,7 @@ body.page-two-column:not(.archive) #primary .entry-content{
 	font-size: 1.5em;
 }
 
-.single-post-page-wrap{
-	text-align: center;
-}
+
 
 .single-post:not(.has-sidebar) #primary{
 	max-width: unset;
@@ -140,12 +151,4 @@ body.page-two-column:not(.archive) #primary .entry-content{
 	width:unset;
 }
 
-@media screen and (max-width:750px){
-	.announcments-label{
-	margin-left: 10.4%;
-	}
-	.page .panel-content .entry-title{
-		font-size: 1.0em;
-	}
 
-}

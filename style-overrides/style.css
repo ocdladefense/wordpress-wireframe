@@ -1,5 +1,5 @@
 /*General Overrides*/
-body{
+body {
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -14,9 +14,12 @@ body{
 
 .site-content-contain {
 	text-align:center;
+	padding-left: 3%;
+	padding-right: 3%;
+	overflow-x: hidden;
 }
-.site-content{
-	padding:0 3% 0 3%;
+.site-content {
+	text-align:left;
 }
 
 .site-content-contain .site-content {

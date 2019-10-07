@@ -1,9 +1,20 @@
 /*footer syles*/
-.site-footer{
+.site-footer {
 	background-color:rgb(238, 241, 249);
+	padding:5%;
+	min-height:50vh;
+	margin-left: -5%;
+	margin-right: -5%;
 }
-.site-footer .wrap{
-	text-align: center;
+.site-footer .wrap {
+	text-align:center;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	height: 100%;
+	margin-top: 25%;
+	margin-bottom: 25%;
 }
 
 .site-info a{
