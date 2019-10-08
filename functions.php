@@ -847,6 +847,11 @@ if(!function_exists('override_base_stylesheets')) {
 			'footer-overrides' => 'footer.css'
 		);
 	
+		// Explicity queueing is required for child themes.
+		if(is_child_theme_active() && false) {
+			wp_enqueue_style('parent-styles',get_template_directory_uri().'/style.css');
+		}
+	
 		foreach($styles as $id => $uri) {
 			wp_enqueue_style($id,$basedir.'/'.$uri);
 		}
@@ -854,8 +859,18 @@ if(!function_exists('override_base_stylesheets')) {
 	}
 }
 
+
+function is_child_theme_active() {
+	return strtolower(wp_get_theme()) != "wireframe";
+}
+
+
 if(function_exists('add_base_stylesheets')) {
 	add_action('wp_enqueue_scripts', 'add_base_stylesheets');
+}
+// Only called when the child theme declares this function.
+if(function_exists('add_child_stylesheets')) {
+	add_action('wp_enqueue_scripts', 'add_child_stylesheets');
 }
 
 

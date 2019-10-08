@@ -14,16 +14,13 @@
 				<?php endif; ?>
 
 				<!--CUSTOM LOGO-->
-				<?php
-					// 
-					if(strtolower(wp_get_theme()) != "wireframe" && false) {
+				<?php if(is_child_theme_active() && !empty(get_theme_mod('custom_logo'))):
 						the_custom_logo();
-					} else {
-				?>
-					<img class="theImg default-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" style="max-width:100px;" />
-				<?php
-					} 
-				?>
+				else: ?>
+					<a href="<?php print get_home_url(); ?>" class="custom-logo-link" rel="home">
+						<img class="custom-logo" alt="OCDLA Logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" />
+					</a>
+				<?php endif; ?>
 				
 				
 				<?php 

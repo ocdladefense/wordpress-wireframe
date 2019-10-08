@@ -22,7 +22,7 @@
 <?php if(is_active_sidebar( 'sidebar-6' ) ): ?>
 
 	<aside class="widget-area footer-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'wireframe' ); ?>">
-		<div class="widget-column footer-widget-area-left site-info">
+		<div class="widget-column horizontal footer-widget-area-left site-info">
 			<?php dynamic_sidebar( 'sidebar-6' ); ?>
 		</div>
 	</aside><!-- .widget-area -->

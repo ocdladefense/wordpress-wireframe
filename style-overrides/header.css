@@ -5,8 +5,12 @@
 	display:none;
 }
 
-.default-logo-image {
+.custom-logo-link {
 	vertical-align:middle;
+}
+
+.custom-logo {
+
 }
 
 .global-header {
@@ -15,7 +19,6 @@
 	overflow-y:visible;
 	display:inline-block;
 	border-bottom: 1px solid #ccc;
-	padding: 1% 2%;
 	top:0;
 	left:0;
 	z-index: 101;
@@ -135,23 +138,6 @@
 }
 
 
-
-
-.custom-logo-link img{
-		height: 24px;
-}
-.custom-logo-link{
-		margin:0 1% 0 1%;
-}
-
-@media screen and (min-width:750px){
-    .custom-logo-link{
-        margin: 0 2% 0 2%;
-    }
-    .custom-logo-link img{
-        height: 50px;
-    }
-}
 
 
 /*Search Bar Widget*/

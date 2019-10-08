@@ -152,3 +152,11 @@ body.page-two-column:not(.archive) #primary .entry-content{
 }
 
 
+
+h1.entry-title {
+	color:#222;
+	font-weight:800;
+	text-transform:uppercase;
+	letter-spacing: 0.14em;
+	font-size:0.8em;
+}

@@ -108,6 +108,10 @@
 
 /** hack - should be in child theme **/
 #sidebar-left .menu li {
-	background-color:#ccc; /* grey */
+	background-color:rgba(255,255,255,1.0); /* grey */
+}
+
+.sidebar .menu {
+	font-family: "Open Sans", sans-serif;
 }
 

@@ -16,12 +16,5 @@ if ( ! is_active_sidebar( 'sidebar-2' ) ) {
 ?>
 
 <aside id="sidebar-right" class="sidebar widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Right Sidebar', 'wireframe' ); ?>">
-	<ul>
-		<li>item 1</li>
-		<li>item 2</li>
-		<li>item 3</li>
-		<li>item 4</li>
-		<li>item 5</li>
-	</ul>
 	<?php dynamic_sidebar( 'sidebar-2' ); ?>
 </aside><!-- #secondary -->
