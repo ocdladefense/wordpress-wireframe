@@ -37,7 +37,11 @@ $wign = new Widget('my-widget-id');
 
 
 function is_inner_page() {
-	return is_single() || (is_page() && ! wireframe_is_frontpage());
+	return !is_homepage_template() && (is_single() || (is_page() && ! wireframe_is_frontpage()));
+}
+
+function is_homepage_template() {
+	return is_page_template('templates/front-page.php');
 }
 
 
