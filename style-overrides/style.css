@@ -56,7 +56,7 @@ body:not(.home) h1.entry-title {
 		display:none;
 	}
 	
-	body.page-template-front-page {
+	body.page-template-front-page .site-header {
 		display:block;
 	}
 
