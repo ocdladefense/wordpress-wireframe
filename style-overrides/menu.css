@@ -115,7 +115,7 @@
 .menu-scroll-down{
 	display: none;
 }
-.menu-main-menu-container{
+.global-header .menu-main-menu-container{
 	display: none;
 }
 .main-close-icon{
