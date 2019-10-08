@@ -15,17 +15,18 @@
 		<?php
 		echo wireframe_get_svg( array( 'icon' => 'bars' ) );
 		echo wireframe_get_svg( array( 'icon' => 'close' ) );
-		_e( 'Dork', 'wireframe' );
 		?>
 	</button>
 
 	<?php
 	if(has_nav_menu('top')) {
-		echo "<h3>Hello World!</h3>";
+		/*echo "<h3>Hello World!</h3>";*/
 		wp_nav_menu(
 			array(
 				'theme_location' => 'top',
 				'menu_id'        => 'top-menu',
+				'menu_class'     => 'horizontal'
+				
 			)
 		);
 	}
