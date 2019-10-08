@@ -1,17 +1,17 @@
 
 <!--global-header-->
-
-		<div id="global-header" style="background-color:<?php echo confget('background-color'); ?>;" class="flex-container global-header" >
-
-			<div class="gh-item gh-item-1">
 				<!--MAIN NAVIGATION-->
 				<?php if(has_nav_menu('main')): ?>
-					<div class="navigation-main">
+					<div class="navigation-main overlay start">
 						<div class="wrap">
 							<?php get_template_part( 'template-parts/navigation/navigation', 'main' );?>
 						</div><!-- .wrap -->
 					</div><!-- .navigation-main -->
 				<?php endif; ?>
+		<div id="global-header" style="background-color:<?php echo confget('background-color'); ?>;" class="flex-container global-header" >
+
+			<div class="gh-item gh-item-1">
+
 
 				<!--CUSTOM LOGO-->
 				<?php if(is_child_theme_active() && !empty(get_theme_mod('custom_logo'))):
