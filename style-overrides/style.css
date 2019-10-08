@@ -3,6 +3,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.entry-content {
+	font-size: 0.9em;
+	line-height: 1.6em;
+	color: rgba(0,0,0,0.8);
+}
+
+
 .wrap {
 	max-width:none;
 	padding-left:0px;
@@ -33,13 +40,11 @@ body:not(.home) h1.entry-title {
 
 
 @media screen and (min-width:750px){
-	/*Global Header Styles*/
 
-	.site-content {
-		margin: 0 auto;
-		max-width:95%;
+	.site-content-contain {
+		padding-left: 5%;
+		padding-right:5%;
 	}
-	
 	.wireframe-front-page .site-content {
 		padding-left:5%;
 		padding-right:5%;
@@ -56,4 +61,19 @@ body:not(.home) h1.entry-title {
 	}
 
 
+}
+
+
+
+h2.widget-title {
+	color: #222;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: 800;
+	letter-spacing: 0.1818em;
+	margin-bottom: 1.5em;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-size: 0.6875rem;
+	margin-bottom: 2em;
 }

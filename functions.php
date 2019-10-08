@@ -848,7 +848,7 @@ if(!function_exists('override_base_stylesheets')) {
 		);
 	
 		// Explicity queueing is required for child themes.
-		if(is_child_theme_active() && false) {
+		if(is_child_theme_active()) {
 			wp_enqueue_style('parent-styles',get_template_directory_uri().'/style.css');
 		}
 	

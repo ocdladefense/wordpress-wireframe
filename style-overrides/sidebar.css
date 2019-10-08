@@ -11,6 +11,7 @@
 	vertical-align: top;
 	background-color:inherit;
 	width:20%;
+	font-size:12px;
 }
 
 aside.sidebar {
@@ -25,10 +26,11 @@ aside.sidebar {
 
 #sidebar-right {
 	display:none;
+	width:15%;
 }
 
 #sidebar-left {
-	width:15%;
+	width:10%;
 }
 
 @media screen and (min-width:1000px) {
@@ -51,7 +53,7 @@ aside.sidebar {
 		display:inline-block;
 	}
 	#primary {
-		width:58%;
+		width:68%;
 	}
 }
 
