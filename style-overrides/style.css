@@ -44,6 +44,7 @@ body:not(.home) h1.entry-title {
 	.site-content-contain {
 		padding-left: 5%;
 		padding-right:5%;
+		margin-top:20px;
 	}
 	.wireframe-front-page .site-content {
 		padding-left:5%;
