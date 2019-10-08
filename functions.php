@@ -41,7 +41,8 @@ function is_inner_page() {
 }
 
 function is_homepage_template() {
-	return is_page_template('templates/front-page.php');
+	// print "<h1>Page Template is: ".get_page_template_slug( get_queried_object_id() );exit;
+	return get_page_template_slug( get_queried_object_id() ) == "front-page.php";
 }
 
 
