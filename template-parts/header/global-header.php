@@ -5,7 +5,7 @@
 
 			<div class="gh-item gh-item-1">
 				<!--MAIN NAVIGATION-->
-				<?php if(false && has_nav_menu('main')): ?>
+				<?php if(has_nav_menu('main')): ?>
 					<div class="navigation-main">
 						<div class="wrap">
 							<?php get_template_part( 'template-parts/navigation/navigation', 'main' );?>
@@ -18,7 +18,7 @@
 						the_custom_logo();
 				else: ?>
 					<a href="<?php print get_home_url(); ?>" class="custom-logo-link" rel="home">
-						<img class="custom-logo" alt="OCDLA Logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" />
+						<img class="default-logo" alt="default logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" />
 					</a>
 				<?php endif; ?>
 				

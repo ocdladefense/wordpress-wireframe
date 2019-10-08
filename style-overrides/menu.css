@@ -111,3 +111,35 @@
 	max-width:140px;
 }
 
+/*Collapsable Main Navigation Styles*/
+.menu-scroll-down{
+	display: none;
+}
+.menu-main-menu-container{
+	display: none;
+}
+.main-close-icon{
+	display:none;
+}
+.toggled-on .main-menu-icon{
+	display:none;
+}
+.toggled-on .main-close-icon{
+	display:unset;
+}
+.main-navigation .menu-toggle{
+	padding: 0px;
+    margin: 0px;
+    border: unset;
+}
+.toggled-on .menu-main-menu-container{
+	display:block;
+	background: aliceblue;
+}
+.main-navigation .menu{
+	padding: 0;
+    margin: 0 auto;
+}
+.main-navigation .menu li a{
+	line-height: 15px;
+} 
