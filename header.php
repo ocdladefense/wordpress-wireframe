@@ -25,7 +25,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="page" class="site">
+	<div id="page" style="background-color:<?php echo confget('background-color');?>;color:<?php echo confget('color');?>;" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wireframe' ); ?></a>
 
 
@@ -49,5 +49,5 @@
 		endif;
 		?>
 
-		<div class="site-content-contain" style="background-color:<?php echo confget('background-color'); ?>;color:<?php confget('color'); ?>;">
+		<div class="site-content-contain">
 			<div id="content" class="site-content">
