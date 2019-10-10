@@ -203,11 +203,17 @@
 }
 
 
-@media screen and (max-width: 750px){
+
+.default-logo{
+	height: 53px;
+    width: 77px;
+}
+
+
 
 .overlay{
 	overflow: hidden;
-	width: 100%;
+	width: 100vw;
     height: 100%;
     z-index: 112;
     background: white;
@@ -215,11 +221,11 @@
     top: 0;
 	left: 0;
 
-	transition: left 0.1s ease-out 0s;
+	transition: left 0.5s ease-out 0s;
 }
 
 .closed{
-	left: -400px
+	left: -100vw;
 
 }
 
@@ -245,6 +251,17 @@
 .navigation-main .menu{
 	border-top: 1px solid black;
 }
+@media screen and (min-width: 750px){
+	.closed{
+		left: -50vw;
+	
+	}
+	
+	.open{
+		left:0px ;
+	}
 
-
+	.overlay{		
+		width: 50vw;
+	}
 }
