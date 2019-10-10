@@ -1,12 +1,5 @@
 
 <!--global-header-->
-<<<<<<< HEAD
-<!--confget(“elements.global-header.css.background-color”);-->
-		<div id="global-header" class="flex-container global-header" >
-
-			<div class="gh-item gh-item-1">
-=======
->>>>>>> 9aa46235a6bd4f104c917e391e1782689ed25e0e
 				<!--MAIN NAVIGATION-->
 				<?php if(has_nav_menu('main')): ?>
 					<div class="navigation-main overlay closed">

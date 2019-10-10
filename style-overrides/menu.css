@@ -142,10 +142,6 @@
 .toggled-on .menu-main-menu-container{
 	display:block;
 	background: aliceblue;
-<<<<<<< HEAD
-	width: 100vh;
-    height: 100vh;
-=======
 	position: fixed;
     top: -1px;
     padding-top: 49px;
@@ -160,7 +156,6 @@
 .menu-main-menu-container{
 	width: 0px;
 	transition: width 0.5s ease-out 0s;
->>>>>>> 9aa46235a6bd4f104c917e391e1782689ed25e0e
 }
 
 .main-navigation .menu{
@@ -168,20 +163,6 @@
     margin: 0 auto;
 }
 .main-navigation .menu li a{
-<<<<<<< HEAD
-	line-height: 20px;
-	font-size: medium;
-}
-.icon {
-	display: inline-block;
-	fill: currentColor;
-	height: 1em;
-	position: relative; /* Align more nicely with capital letters */
-	top: -0.0625em;
-	vertical-align: middle;
-	width: 1em;
-}
-=======
 	line-height: 15px;
 } 
 
@@ -281,4 +262,3 @@
 		width: 50vw;
 	}
 }
->>>>>>> 9aa46235a6bd4f104c917e391e1782689ed25e0e
