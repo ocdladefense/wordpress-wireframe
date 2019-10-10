@@ -6,7 +6,7 @@ body {
 .entry-content {
 	font-size: 0.9em;
 	line-height: 1.6em;
-	color: rgba(0,0,0,0.8);
+	color:inherit;
 }
 
 
@@ -71,7 +71,7 @@ body:not(.home) h1.entry-title {
 
 
 h2.widget-title {
-	color: #222;
+	color:inherit;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: 800;

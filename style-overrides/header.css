@@ -9,8 +9,8 @@
 	vertical-align:middle;
 }
 
-.custom-logo {
-
+.default-logo {
+	
 }
 
 .global-header {
@@ -22,7 +22,6 @@
 	top:0;
 	left:0;
 	z-index: 101;
-	background-color: rgba(255,255,255,0.3);
 	padding-left:1%;
 	padding-right:1%;
 }
@@ -37,7 +36,6 @@
 }
 
 .global-header {
-	background-color: transparent;
 	border-bottom-width: 1px;
 	border-bottom-color: transparent;
 	border-bottom-style: solid;
@@ -160,14 +158,6 @@ label {
 .search-widget-style{
     display: inline-block;
 }
-.global-header .search-field::placeholder{
-    color:black;
-}
-
-
-.search-field::placeholder {
-	color:rgba(0,0,0,0.4);
-}
 .search-form .search-field {
 	background: none;
 	border:1px solid #eee;
@@ -197,23 +187,6 @@ label {
 
 
 /* Global Header Menu */
-/*
-.gh-item-2 {
-    margin-top: 10px;
-    margin-left: -70px;
-    vertical-align: text-top;
-}
-*/
-
-
-
-
-
-
-
-
-
-
 
 /*TagLine*/
 .tagline-container{

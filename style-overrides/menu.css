@@ -26,9 +26,6 @@
 	color:inherit;
 }
 
-.menu .light-background {
-	color:rgba(0,0,0,0.6);
-}
 
 /* Basic menu.  Default is vertical/flyout */
 .menu li, .menu.default li {
@@ -135,11 +132,23 @@
 .toggled-on .menu-main-menu-container{
 	display:block;
 	background: aliceblue;
+	width: 100vh;
+    height: 100vh;
 }
 .main-navigation .menu{
 	padding: 0;
     margin: 0 auto;
 }
 .main-navigation .menu li a{
-	line-height: 15px;
-} 
+	line-height: 20px;
+	font-size: medium;
+}
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	position: relative; /* Align more nicely with capital letters */
+	top: -0.0625em;
+	vertical-align: middle;
+	width: 1em;
+}

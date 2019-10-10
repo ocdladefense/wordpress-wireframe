@@ -67,7 +67,7 @@ body.page-two-column:not(.archive) #primary .entry-content{
 }
 
 .announcments-label{
-	color: rgb(100, 120, 160);
+	color: inherit;
 	font-weight: bold;
 	text-align:left;
 }
@@ -96,7 +96,7 @@ body.page-two-column:not(.archive) #primary .entry-content{
 	margin-right: 3px;
 }
 .page .panel-content .entry-title{
-	color:rgb(100, 120, 160);
+	color:inherit;
 	font-family: 'Open Sans', sans-serif;
 }
 .trevor-posts .wp-block-image figure.alignleft{
@@ -116,7 +116,7 @@ body.page-two-column:not(.archive) #primary .entry-content{
 .trevor-posts .entry-content ul,
 .trevor-posts .entry-content li
 {
-	color:rgb(100, 120, 160);
+	color:inherit;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 }
@@ -154,9 +154,13 @@ body.page-two-column:not(.archive) #primary .entry-content{
 
 
 h1.entry-title {
-	color:#222;
+	color:inherit;
 	font-weight:800;
 	text-transform:uppercase;
 	letter-spacing: 0.14em;
 	font-size:1.0em;
+}
+div,h1,h2,h3,p,span,a{
+	color:inherit;
+	text-decoration: none;
 }
