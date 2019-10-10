@@ -182,25 +182,69 @@
 	background: aliceblue;
 } */
 
+.menu-toggle-close{
+	background: transparent;
+    border: 0px;
+}
+
+.menu-toggle-open{
+	background: transparent;
+    border: 0px;
+}
+
+.main-menu-icon{
+	vertical-align: middle;
+}
+
+.default-logo-overlay{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (max-width: 750px){
+
 .overlay{
 	overflow: hidden;
 	width: 100%;
     height: 100%;
     z-index: 112;
-    background: aliceblue;
+    background: white;
     position: fixed;
     top: 0;
 	left: 0;
 
-	transition: width 0.3s ease-out 0s;
+	transition: left 0.1s ease-out 0s;
 }
 
-.start{
-	width: 0px
+.closed{
+	left: -400px
 
 }
 
-.end{
-	width: 100%;
+.open{
+	left:0px ;
+}
+
+.end .main-menu-icon{
+	display: none;
+}
+
+.menu-toggle-close{
+	margin-top: 46px;
+}
+
+.navigation-main .menu li{
+	font-size:1.2em;
+	padding-top: 22px;
+	border-bottom: 1px groove black;
+    margin-left: -40px;
+}
+
+.navigation-main .menu{
+	border-top: 1px solid black;
+}
+
 
 }
