@@ -109,11 +109,12 @@
 }
 
 /*Collapsable Main Navigation Styles*/
-.menu-scroll-down{
+/* .menu-scroll-down{
 	display: none;
 }
-.menu-main-menu-container{
-	display: none;
+.global-header .menu-main-menu-container{
+	
+	overflow: hidden;
 }
 .main-close-icon{
 	display:none;
@@ -127,19 +128,47 @@
 .main-navigation .menu-toggle{
 	padding: 0px;
     margin: 0px;
-    border: unset;
+	border: unset;
+
 }
+
+.toggled-on .menu-toggle{
+	left:0px;
+	top:46px;
+	position: fixed;
+    z-index: 10;
+}
+
 .toggled-on .menu-main-menu-container{
 	display:block;
 	background: aliceblue;
+<<<<<<< HEAD
 	width: 100vh;
     height: 100vh;
+=======
+	position: fixed;
+    top: -1px;
+    padding-top: 49px;
 }
+
+.toggled-on .menu-main-menu-container{
+	height: 100%;
+	width: 100%;
+
+}
+
+.menu-main-menu-container{
+	width: 0px;
+	transition: width 0.5s ease-out 0s;
+>>>>>>> 9aa46235a6bd4f104c917e391e1782689ed25e0e
+}
+
 .main-navigation .menu{
 	padding: 0;
     margin: 0 auto;
 }
 .main-navigation .menu li a{
+<<<<<<< HEAD
 	line-height: 20px;
 	font-size: medium;
 }
@@ -152,3 +181,104 @@
 	vertical-align: middle;
 	width: 1em;
 }
+=======
+	line-height: 15px;
+} 
+
+.main-navigation .menu li {
+	font-size: 1.7em;
+	padding-bottom: 23px;
+}
+
+.global-header .menu-main-menu-container {
+    overflow: hidden;
+
+    top: 0;
+    left: 0;
+	background: aliceblue;
+} */
+
+.menu-toggle-close{
+	background: transparent;
+    border: 0px;
+}
+
+.menu-toggle-open{
+	background: transparent;
+    border: 0px;
+}
+
+.main-menu-icon{
+	vertical-align: middle;
+}
+
+.default-logo-overlay{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.default-logo{
+	height: 53px;
+    width: 77px;
+}
+
+
+
+.overlay{
+	overflow: hidden;
+	width: 100vw;
+    height: 100%;
+    z-index: 112;
+    background: white;
+    position: fixed;
+    top: 0;
+	left: 0;
+
+	transition: left 0.5s ease-out 0s;
+}
+
+.closed{
+	left: -100vw;
+
+}
+
+.open{
+	left:0px ;
+}
+
+.end .main-menu-icon{
+	display: none;
+}
+
+.menu-toggle-close{
+	margin-top: 46px;
+}
+
+.navigation-main .menu li{
+	font-size:1.2em;
+	padding-top: 22px;
+	border-bottom: 1px groove black;
+    margin-left: -40px;
+}
+
+.navigation-main .menu{
+	border-top: 1px solid black;
+}
+@media screen and (min-width: 750px){
+	.closed{
+		left: -50vw;
+	
+	}
+	
+	.open{
+		left:0px ;
+	}
+
+	.overlay{		
+		width: 50vw;
+	}
+}
+>>>>>>> 9aa46235a6bd4f104c917e391e1782689ed25e0e
