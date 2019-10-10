@@ -1,7 +1,7 @@
 
 <!--global-header-->
-
-		<div id="global-header" style="background-color:<?php echo confget('background-color'); ?>;" class="flex-container global-header" >
+<!--confget(“elements.global-header.css.background-color”);-->
+		<div id="global-header" class="flex-container global-header" >
 
 			<div class="gh-item gh-item-1">
 				<!--MAIN NAVIGATION-->
