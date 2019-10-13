@@ -840,15 +840,15 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 if(!function_exists('override_base_stylesheets')) {
 
 	function add_base_stylesheets() {
-		$basedir = get_template_directory_uri() .'/style-overrides';
+		$basedir = get_template_directory_uri() .'/styles';
 		$styles = array(
-			'general-overrides' => 'style.css',
-			'structure-overrides' => 'structure.css',
-			'sidebar-overrides' => 'sidebar.css',
-			'header-overrides' => 'header.css',
-			'menu-overrides' => 'menu.css',
-			'post-overrides' => 'post.css',
-			'footer-overrides' => 'footer.css'
+			'general' => 'style.css',
+			'structure' => 'structure.css',
+			'sidebar' => 'sidebar.css',
+			'header' => 'header.css',
+			'menu' => 'menu.css',
+			'post' => 'post.css',
+			'footer' => 'footer.css'
 		);
 	
 		// Explicity queueing is required for child themes.
