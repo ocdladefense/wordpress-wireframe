@@ -848,7 +848,8 @@ if(!function_exists('override_base_stylesheets')) {
 			'header' => 'header.css',
 			'menu' => 'menu.css',
 			'post' => 'post.css',
-			'footer' => 'footer.css'
+			'footer' => 'footer.css',
+			'overlay' => 'overlay.css'
 		);
 	
 		// Explicity queueing is required for child themes.

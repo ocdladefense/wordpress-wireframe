@@ -103,6 +103,9 @@
 	overflow-x: hidden;
 	overflow-y: hidden;
 	max-width:100%;
+	position:relative;
+	top:50px;
+	left:0px;
 }
 
 .site-header img {

@@ -25,9 +25,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+	<?php get_template_part('template-parts/overlay/overlay'); ?>
+		
 	<div id="page" style="background-color:<?php echo confget('background-color');?>;color:<?php echo confget('color');?>;" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wireframe' ); ?></a>
-
 
 
 		<?php get_template_part('template-parts/header/global-header'); ?>

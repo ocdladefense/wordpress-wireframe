@@ -1,28 +1,20 @@
-jQuery(menuOnClick);
+jQuery(setupTogglers);
 
-function menuOnClick()
+function setupTogglers()
 {
-  var menu_button_open = document.getElementById('menu-toggle-open');
-  var menu_button_close = document.getElementById('menu-toggle-close');
+  var togglers = document.getElementsByClassName('toggles');
     
 
-  menu_button_open.addEventListener('click', toggleMenu);
-  menu_button_close.addEventListener('click', toggleMenu);
-
+  for(var i = 0; i<togglers.length; i++){
+  	 togglers[i].addEventListener('click', toggleComponent);
+	}
 
 
 }
 
-function toggleMenu()
+function toggleComponent()
 {
-        var navigation_main = jQuery(document.getElementsByClassName('navigation-main'));
-        
-        if(navigation_main.hasClass("open")){
-            navigation_main.toggleClass("open");
-        }
-        else{
-            navigation_main.addClass("open");
-        }
+	jQuery("#overlay").toggleClass("toggle-on");
 }
 
 

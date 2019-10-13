@@ -1,32 +1,14 @@
 
 <!--global-header-->
-				<!--MAIN NAVIGATION-->
-				<?php if(has_nav_menu('main')): ?>
-					<div class="navigation-main overlay closed">
-					<button id= "menu-toggle-close" class="menu-toggle-close" aria-controls="main-menu" aria-expanded="false">
-						<img class="main-close-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/close-icon.png" style="height:25px;" />
-					</button>
 
-					<?php if(is_child_theme_active() && !empty(get_theme_mod('custom_logo'))):
-						the_custom_logo();
-						else: ?>
-					<a href="<?php print get_home_url(); ?>" class="custom-logo-link" rel="home">
-						<img class="default-logo-overlay" alt="default logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/defaultLogo.png" />
-					</a>
-				<?php endif; ?>
-						<div class="wrap">
-							<?php get_template_part( 'template-parts/navigation/navigation', 'main' );?>
-						</div><!-- .wrap -->
-					</div><!-- .navigation-main -->
-					
-				<?php endif; ?>
 				
 		<div id="global-header" style="background-color:<?php echo confget('background-color'); ?>;" class="flex-container global-header" >
 
 			<div class="gh-item gh-item-1">
-			<button id= "menu-toggle-open" class="menu-toggle-open" aria-controls="main-menu" aria-expanded="false">
-				<img class="main-menu-icon"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
-			</button>
+			
+				<button id="overlay-open" class="toggles" aria-controls="overlay" aria-expanded="false">
+					<img class="main-menu-icon"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
+				</button>
 
 
 				<!--CUSTOM LOGO-->
