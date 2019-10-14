@@ -13,6 +13,11 @@
 	
 }
 
+.custom-logo {
+	width:auto;
+	max-height:40px;
+}
+
 .global-header {
 	position: fixed;
 	width: 100%;
@@ -24,6 +29,7 @@
 	z-index: 101;
 	padding-left:1%;
 	padding-right:1%;
+	line-height:3.0em;
 }
 
 .global-header .search-submit {
