@@ -26,7 +26,7 @@ function getSiteValue($arr, $keys) {
 	$keyc = array_shift($keys);
 	
 	if(!empty($arr[$keyc])) {
-		if(!is_array($arr[$keyc])) return $arr[$keyc];
+		if(!is_array($arr[$keyc]) || count($keys) == 0) return $arr[$keyc];
 		else return getSiteValue($arr[$keyc],$keys);
 	}
 	
@@ -42,6 +42,10 @@ function confget($key) {
 	
 	if(empty($json)) {
 		$json = load_site();
+	}
+	
+	if(null == $json){
+		throw new Exception("Error parsing site.json.");
 	}
 	
 	return null == $json ? '' : getSiteValue($json, $keys);
