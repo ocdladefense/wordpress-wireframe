@@ -72,6 +72,17 @@ function wireframe_homepage_sections($limit = 5){
 }
 
 
+function wireframe_get_css($element = null){
+	$styles = confget("elements.".$element.".css");
+	$css = array();
+	foreach($styles as $prop => $value){
+		$css[]=$prop.": ".$value;
+	}
+	
+	return implode(";",$css);
+}
+
+
 /**
  * Wireframe only works in WordPress 4.7 or later.
  */
