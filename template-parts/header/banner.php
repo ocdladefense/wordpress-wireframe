@@ -1,9 +1,9 @@
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header" style="<?php echo wireframe_get_css("site-header"); ?>;" role="banner">
 			
 			<?php if(strtolower(wp_get_theme()) != "wireframe"): ?>
 				<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php else: ?>
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				<img class="default-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php endif; ?>
 			
 			<img class="logo-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ocdla-logo-white.svg" />

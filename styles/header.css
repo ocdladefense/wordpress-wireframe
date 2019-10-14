@@ -354,3 +354,7 @@ img.logo-overlay {
 .search-form label {
 	display:none;
 }
+
+.default-header{
+	display:none;
+}
