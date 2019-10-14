@@ -12,9 +12,19 @@ function setupTogglers()
 
 }
 
-function toggleComponent()
+
+
+function toggleComponent(e)
 {
-	jQuery("#overlay").toggleClass("toggle-on");
+	var target = e.target;
+	console.log(target);
+	var controls = target.dataset.controls;
+	
+	var elem = document.getElementById(controls);
+	var anime = elem.dataset.animation;
+	
+	
+	jQuery("#overlay").toggleClass(anime+"-on");
 }
 
 

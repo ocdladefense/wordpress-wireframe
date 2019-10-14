@@ -24,7 +24,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="<?php print wireframe_body_styles(array("background-color","color")); ?>">
 
 	<?php get_template_part('template-parts/overlay/overlay'); ?>
 		

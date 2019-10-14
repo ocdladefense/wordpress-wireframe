@@ -44,6 +44,15 @@ function is_homepage_template() {
 	return get_page_template_slug( get_queried_object_id() ) == "front-page.php";
 }
 
+function wireframe_body_styles($names = array()){
+	$css = array();
+	foreach($names as $name){
+		$css[] = $name.":".confget($name);
+	}
+	
+	return implode(";",$css);
+}
+
 
 /**
  * Wireframe only works in WordPress 4.7 or later.

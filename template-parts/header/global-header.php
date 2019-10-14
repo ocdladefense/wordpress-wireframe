@@ -6,9 +6,7 @@
 
 			<div class="gh-item gh-item-1">
 			
-				<button id="overlay-open" class="toggles" aria-controls="overlay" aria-expanded="false">
-					<img class="main-menu-icon"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
-				</button>
+				<img id="overlay-open" class="toggles icon" data-controls="overlay"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
 
 
 				<!--CUSTOM LOGO-->

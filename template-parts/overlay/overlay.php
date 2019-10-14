@@ -1,13 +1,11 @@
 <!--MAIN NAVIGATION-->
 
 
-<div id="overlay" class="overlay toggle-off">
-	
+<div id="overlay" class="overlay drawer-off" data-animation="drawer">
 
-	
-		<button id="overlay-close" class="toggles" aria-controls="overlay" aria-expanded="false">
-			<img class="main-menu-icon"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
-		</button
+	<div class="overlay-content">
+
+		<img id="overlay-close" class="toggles icon" data-controls="overlay" src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
 	
 	
 		<?php if(is_child_theme_active() && !empty(get_theme_mod('custom_logo'))):
@@ -28,5 +26,6 @@
 		<?php endif; ?>
 
 
+	</div>
 	
 </div>
