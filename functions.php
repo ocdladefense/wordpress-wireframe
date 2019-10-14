@@ -76,6 +76,7 @@ function wireframe_get_css($element = null){
 	$styles = confget("elements.".$element.".css");
 	$css = array();
 	foreach($styles as $prop => $value){
+		if(empty($value)) continue;
 		$css[]=$prop.": ".$value;
 	}
 	
