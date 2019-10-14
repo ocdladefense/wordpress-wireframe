@@ -13,6 +13,17 @@
 	
 }
 
+ul {
+	padding-left:0px;
+}
+
+
+
+.home #content {
+	margin-top:50px;
+}
+
+
 .custom-logo {
 	width:auto;
 	max-height:40px;

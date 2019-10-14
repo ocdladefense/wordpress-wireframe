@@ -54,6 +54,24 @@ function wireframe_body_styles($names = array()){
 }
 
 
+
+function wireframe_homepage_sections($limit = 5){
+	if(!confget("show-homepage-sections")) return '';
+	
+	$sections = confget("sections");
+
+	
+	$markup = array();
+	
+	foreach($sections as $section){
+		$tmp = "<section id='{$section['id']}' class='section-home'><h2 class='section-title'>{$section['title']}</h2><div class='section-content'>{$section['content']}</div></section>";
+		$markup[]=$tmp;
+	}
+	
+	return implode("\n",$markup);
+}
+
+
 /**
  * Wireframe only works in WordPress 4.7 or later.
  */
@@ -858,7 +876,8 @@ if(!function_exists('override_base_stylesheets')) {
 			'menu' => 'menu.css',
 			'post' => 'post.css',
 			'footer' => 'footer.css',
-			'overlay' => 'overlay.css'
+			'overlay' => 'overlay.css',
+			'home' => 'home.css'
 		);
 	
 		// Explicity queueing is required for child themes.

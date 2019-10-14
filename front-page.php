@@ -77,7 +77,10 @@ get_header(); ?>
 		</div>
 		
 		<?php endif; ?>		
+
 		
+		<?php echo wireframe_homepage_sections(); ?>
+
 
 		<div class="trevor-posts-container">
 			<div class="trevor-posts" >
