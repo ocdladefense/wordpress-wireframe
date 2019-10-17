@@ -71,10 +71,28 @@ function wireframe_homepage_sections($limit = 5){
 	return implode("\n",$markup);
 }
 
+function wireframe_homepage_pages($limit = 10){
+	if(!confget("show-homepage-pages")) return '';
+	
+	$pages = confget("pages");
+
+	
+	$markup = array();
+	
+	foreach($pages as $page){
+		$tmp = "<section id='{$page['id']}' class='section-home'><h2 class='section-title'>{$page['title']}</h2><div class='section-content'>{$page['content']}</div></section>";
+		$markup[]=$tmp;
+	}
+	
+	return implode("\n",$markup);
+}
+
 
 function wireframe_get_css($element = null){
 	$styles = confget("elements.".$element.".css");
 	$css = array();
+	if(empty($styles))
+		return "";
 	foreach($styles as $prop => $value){
 		if(empty($value)) continue;
 		$css[]=$prop.": ".$value;

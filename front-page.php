@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<?php
 		// Get each of our panels and show the post data.
-		if ( 0 !== wireframe_panel_count() || is_customize_preview() ) : // If we have pages to show.
+		if ( confget("show-homepage-recent-posts") && (0 !== wireframe_panel_count() || is_customize_preview() )) : // If we have pages to show.
 
 			/**
 			 * Filter number of front page sections in Twenty Seventeen.
@@ -50,7 +50,7 @@ get_header(); ?>
 			<div class="homepage-menu-column">
 			
 			
-			<?php if(has_nav_menu('menu1')):  ?>
+			<?php if(has_nav_menu('menu-loc-1')):  ?>
 				<div class="trevor-menu trevor-about-menus">
 					<div class="trevor-menu-label trevor-about-menu-label">Menu #1</div>
 					<?php wp_nav_menu( array('theme_location' => 'menu1','fallback_cb'=>false)); ?>
@@ -58,7 +58,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 			
-			<?php if(has_nav_menu('menu2')):  ?>
+			<?php if(has_nav_menu('menu-loc-2')):  ?>
 				<div class="trevor-menu trevor-member-menus">
 					<div class="trevor-menu-label trevor-members-menu-label">Menu #2</div>
 					<?php wp_nav_menu( array('theme_location' => 'menu2','fallback_cb'=>false)); ?>
@@ -66,7 +66,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 			
-			<?php if(has_nav_menu('menu3')):  ?>
+			<?php if(has_nav_menu('menu-loc-3')):  ?>
 				<div class="trevor-menu trevor-resources-menus">
 					<div class="trevor-menu-label trevor-resources-menu-label">Menu #3</div>
 					<?php wp_nav_menu( array('theme_location' => 'menu3','fallback_cb'=>false)); ?>
@@ -80,7 +80,7 @@ get_header(); ?>
 
 		
 		<?php echo wireframe_homepage_sections(); ?>
-
+		<?php echo wireframe_homepage_pages(); ?>
 
 		<div class="trevor-posts-container">
 			<div class="trevor-posts" >

@@ -1,12 +1,12 @@
 		<header id="masthead" class="site-header" style="<?php echo wireframe_get_css("site-header"); ?>;" role="banner">
 			
-			<?php if(strtolower(wp_get_theme()) != "wireframe"): ?>
+			<?php if(true || strtolower(wp_get_theme()) != "wireframe"): ?>
 				<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php else: ?>
 				<img class="default-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php endif; ?>
 			
-			<img class="logo-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ocdla-logo-white.svg" />
+			
 		
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
 				<div class="widget-area navigation-top banner-top-nav">
