@@ -1,23 +1,11 @@
 		<header id="masthead" class="site-header" style="<?php echo wireframe_get_css("site-header"); ?>;" role="banner">
 			
 			<?php if(true || strtolower(wp_get_theme()) != "wireframe"): ?>
-				<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				<!-- <img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /> -->
 			<?php else: ?>
 				<img class="default-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php endif; ?>
 			
-			
-		
-			<?php if ( has_nav_menu( 'top' ) ) : ?>
-				<div class="widget-area navigation-top banner-top-nav">
-					<div  id="cssmenu" class="wrap">
-						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-					</div><!-- .wrap -->
-				</div><!-- .navigation-top -->
-			<?php endif; ?>
-
-
-
 
 			<!--BANNER WIDGET AREAS--> 
 			<!--Left Banner Widget Area -->
