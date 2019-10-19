@@ -5,6 +5,18 @@
 }
 
 
+.admin-bar #overlay {
+	margin-top:60px;
+}
+@media screen and (min-width:1200px) {
+	.admin-bar #overlay {
+			margin-top: 32px;
+	}
+}
+
+
+
+
 .icon {
 	vertical-align:middle;
 	line-height: 1.0em;
