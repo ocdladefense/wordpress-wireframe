@@ -2,7 +2,7 @@
 <!--global-header-->
 
 				
-		<div id="global-header" style="<?php echo wireframe_get_css("global-header"); ?>;" class="flex-container global-header" >
+		<div id="global-header" class="flex-container global-header" >
 
 			<div class="gh-item gh-item-1">
 			
