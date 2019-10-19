@@ -1,9 +1,13 @@
 		<header id="masthead" class="site-header" style="<?php echo wireframe_get_css("site-header"); ?>;" role="banner">
 			
 			<?php if(true || strtolower(wp_get_theme()) != "wireframe"): ?>
-				<!-- <img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /> -->
+				<?php if(!wireframe_has_prop("site-header","background-image")): ?>
+					<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				<?php endif; ?>
 			<?php else: ?>
+				<?php if(!wireframe_has_prop("site-header","background-image")): ?>
 				<img class="default-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+				<?php endif; ?>
 			<?php endif; ?>
 			
 

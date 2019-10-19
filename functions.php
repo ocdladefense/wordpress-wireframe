@@ -88,17 +88,32 @@ function wireframe_homepage_pages($limit = 10){
 }
 
 
-function wireframe_get_css($element = null){
+function wireframe_has_prop($element,$prop){
+	$css = _wireframe_get_css($element);
+	
+
+	return array_key_exists($prop,$css);
+}
+
+
+function _wireframe_get_css($element) {
 	$styles = confget("elements.".$element.".css");
 	$css = array();
-	if(empty($styles))
-		return "";
+	
+	if(empty($styles)) return array();
+	
 	foreach($styles as $prop => $value){
 		if(empty($value)) continue;
 		$css[]=$prop.": ".$value;
 	}
 	
-	return implode(";",$css);
+	return $css;
+}
+
+function wireframe_get_css($element = null){
+	$css = _wireframe_get_css($element);
+	
+	return empty($css) ? "" : implode(";",$css);
 }
 
 
