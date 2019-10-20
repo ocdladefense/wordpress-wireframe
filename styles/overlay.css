@@ -6,7 +6,7 @@
 
 
 .admin-bar #overlay {
-	margin-top:60px;
+	margin-top:47px;
 }
 @media screen and (min-width:1200px) {
 	.admin-bar #overlay {
@@ -14,6 +14,26 @@
 	}
 }
 
+#overlay .custom-logo-link {
+	line-height:10px;
+}
+
+
+.toggles-overlay {
+  position: relative;
+	display:inline-block;
+	min-width:2.0em;
+}
+.toggles-overlay:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #000;
+  border-bottom: 0.125em solid #000;
+}
 
 
 

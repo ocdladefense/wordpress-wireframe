@@ -5,7 +5,7 @@
 
 	<div class="overlay-content">
 
-		<img id="overlay-close" class="toggles icon" data-controls="overlay" src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
+	<div class="toggles icon toggles-overlay" data-controls="overlay">&nbsp;</div>
 	
 	
 		<?php if(is_child_theme_active() && !empty(get_theme_mod('custom_logo'))):

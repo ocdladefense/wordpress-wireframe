@@ -2,11 +2,12 @@
 <!--global-header-->
 
 				
-		<div id="global-header" class="flex-container global-header" >
+		<div id="global-header" class="global-header" >
 
 			<div class="gh-item gh-item-1">
 			
-				<img id="overlay-open" class="toggles icon" data-controls="overlay"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" />
+				<!-- <img class="toggles icon toggles-overlay" data-controls="overlay"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" /> -->
+				<div class="toggles icon toggles-overlay" data-controls="overlay">&nbsp;</div>
 
 
 				<!--CUSTOM LOGO-->
