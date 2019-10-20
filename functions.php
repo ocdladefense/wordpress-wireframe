@@ -919,13 +919,14 @@ if(!function_exists('override_base_stylesheets')) {
 			'sidebar' => 'sidebar.css',
 			'header' => 'header.css',
 			'menu' => 'menu.css',
+			'menu-accordion' => 'menu-accordion.css',
 			'post' => 'post.css',
 			'footer' => 'footer.css',
 			'overlay' => 'overlay.css',
 			'home' => 'home.css'
 		);
 	
-		// Explicity queueing is required for child themes.
+		// Explicity queueing of parent theme style.css required for child themes.
 		if(is_child_theme_active()) {
 			wp_enqueue_style('parent-styles',get_template_directory_uri().'/style.css');
 		}
