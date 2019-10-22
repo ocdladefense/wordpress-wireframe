@@ -6,7 +6,7 @@
 				<?php endif; ?>
 			<?php else: ?>
 				<?php if(!wireframe_has_prop("site-header","background-image")): ?>
-				<img class="default-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+					<img class="default-header" src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 				<?php endif; ?>
 			<?php endif; ?>
 			

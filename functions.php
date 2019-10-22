@@ -89,12 +89,16 @@ function wireframe_homepage_pages($limit = 10){
 
 
 function wireframe_has_prop($element,$prop){
-	$css = _wireframe_get_css($element);
-	
-
-	return array_key_exists($prop,$css);
+	$conf = confget("elements.".$element.".css");
+	return array_key_exists($prop,$conf);
 }
 
+
+
+
+function wfp($array){
+	return "<pre>".print_r($array,true)."</pre>";
+}
 
 function _wireframe_get_css($element) {
 	$styles = confget("elements.".$element.".css");
@@ -241,7 +245,7 @@ function wireframe_setup() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
-		'widgets'     => array(
+		/* 'widgets'     => array(
 			// Place three core-defined widgets in the sidebar area.
 			'sidebar-1' => array(
 				'text_business_info',
@@ -268,8 +272,9 @@ function wireframe_setup() {
 				'text_about',
 				'widgets',
 			)
-		),
 
+		),
+			*/
 		// Specify the core-defined pages to create and add custom thumbnails to some of them.
 		'posts'       => array(
 			'home',

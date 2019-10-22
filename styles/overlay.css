@@ -31,12 +31,12 @@
   left: 0;
   width: 1em;
   height: 0.125em;
-  border-bottom-width: 0.125em;
-  border-bottom-style: solid;
-  border-bottom-color: inherit;
   border-top-width: 0.375em;
   border-top-style: double;
   border-top-color: inherit;
+  border-bottom-width: 0.125em;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
 }
 
 

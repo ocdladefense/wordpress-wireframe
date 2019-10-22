@@ -7,14 +7,14 @@ function load_site(){
 	$file = $searchdir.'/site.json';
 	
 	if(!file_exists($file)) {
-		return null;
+		throw new Exception("Error reading site.json file from: ".$searchdir);
 	}
 	
 	$handle = fopen($file,'r');
 	if($handle !== false) {
 		$data = fread($handle,filesize($file));
 	} else {
-		return null;
+		throw new Exception("Error reading site.json file from: ".$searchdir);
 	}
 
 	return json_decode($data,true);
