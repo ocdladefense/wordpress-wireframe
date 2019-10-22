@@ -31,8 +31,12 @@
   left: 0;
   width: 1em;
   height: 0.125em;
-  border-top: 0.375em double #000;
-  border-bottom: 0.125em solid #000;
+  border-bottom-width: 0.125em;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+  border-top-width: 0.375em;
+  border-top-style: double;
+  border-top-color: inherit;
 }
 
 
