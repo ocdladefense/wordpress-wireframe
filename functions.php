@@ -272,9 +272,9 @@ function wireframe_setup() {
 				'text_about',
 				'widgets',
 			)
-			*/
-		),
 
+		),
+			*/
 		// Specify the core-defined pages to create and add custom thumbnails to some of them.
 		'posts'       => array(
 			'home',
