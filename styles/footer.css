@@ -1,8 +1,7 @@
 /*footer syles*/
 .site-footer {
-	background-color:rgb(238, 241, 249);
 	padding:5%;
-	min-height:50vh;
+	min-height:20vh;
 	margin-left: -5%;
 	margin-right: -5%;
 }
@@ -37,6 +36,6 @@
 
 @media screen and (min-width: 48em) {
 	.site-footer {
-		min-height: 100vh;
+		min-height: 50vh;
 	}
 }
