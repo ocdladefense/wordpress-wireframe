@@ -101,6 +101,11 @@ ul {
 .admin-bar .global-header {
 	margin-top: 46px;
 }
+@media screen and (min-width:1000px) {
+.admin-bar .global-header {
+	margin-top: 32px;
+}
+}
 
 .site-navigation-fixed .global-header {
 	height:100%;
