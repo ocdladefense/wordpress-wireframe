@@ -90,7 +90,8 @@ function wireframe_homepage_pages($limit = 10){
 
 function wireframe_has_prop($element,$prop){
 	$conf = confget("elements.".$element.".css");
-	return array_key_exists($prop,$conf);
+
+	return null == $conf ? false : array_key_exists($prop,$conf);
 }
 
 
