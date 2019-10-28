@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Wireframe functions and definitions
  *
@@ -18,6 +19,7 @@ require($path2);
 require($path3);
 require($path4);
 require(get_template_directory() .'/inc/site.inc');
+require(get_template_directory() .'/inc/StyleLoader.php');
 
 
 
@@ -667,8 +669,9 @@ function wireframe_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'wireframe-fonts', wireframe_fonts_url(), array(), null );
 
+	// BUG? @jbernal 2019-10-28
 	// Theme stylesheet.
-	wp_enqueue_style( 'wireframe-style', get_stylesheet_uri() );
+	// wp_enqueue_style( 'wireframe-style', get_stylesheet_uri() );
 
 	// Theme block stylesheet.
 	wp_enqueue_style( 'wireframe-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'wireframe-style' ), '1.1' );
@@ -914,11 +917,11 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 /**
+	* Queue up stylesheets for the parent theme.
+	*
   * @function add_custom_stylesheets
   *
-  * @description Queue up stylesheets for this theme.
   */
-if(!function_exists('override_base_stylesheets')) {
 
 	function add_base_stylesheets() {
 		$basedir = get_template_directory_uri() .'/styles';
@@ -935,17 +938,25 @@ if(!function_exists('override_base_stylesheets')) {
 			'home' => 'home.css'
 		);
 	
-		// Explicity queueing of parent theme style.css required for child themes.
+		// Explicitly queueing of parent theme style.css required for child themes.
 		if(is_child_theme_active()) {
-			wp_enqueue_style('parent-styles',get_template_directory_uri().'/style.css');
+			wp_enqueue_style('wireframe-style',get_template_directory_uri().'/style.css');
 		}
 	
-		foreach($styles as $id => $uri) {
-			wp_enqueue_style($id,$basedir.'/'.$uri);
+	
+		if(!is_child_theme_active()) {
+			foreach($styles as $id => $uri) {
+				wp_enqueue_style($id,$basedir.'/'.$uri);
+			}
+		} else {
+			foreach($styles as $id => $uri) {
+				wp_enqueue_style($id,$basedir.'/'.$uri);
+			}
 		}
 	
+		
+		// print debug_styles();
 	}
-}
 
 
 function is_child_theme_active() {
@@ -953,9 +964,14 @@ function is_child_theme_active() {
 }
 
 
+
+
+
+
 if(function_exists('add_base_stylesheets')) {
 	add_action('wp_enqueue_scripts', 'add_base_stylesheets');
 }
+
 // Only called when the child theme declares this function.
 if(function_exists('add_child_stylesheets')) {
 	add_action('wp_enqueue_scripts', 'add_child_stylesheets');
