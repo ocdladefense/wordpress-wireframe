@@ -27,7 +27,13 @@ ul {
 
 .custom-logo {
 	width:auto;
-	max-height:40px;
+	max-height:56px;
+}
+
+@media screen and (min-width:1000px) {
+	.custom-logo {
+		max-height:80px;
+	}	
 }
 
 .global-header {
@@ -69,7 +75,7 @@ ul {
 .gh-item {
 	width:33%;
 	display: inline-block;
-	line-height:10px;
+	line-height:1.0rem;
 	vertical-align:middle;
 }
 
