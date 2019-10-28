@@ -674,21 +674,21 @@ function wireframe_scripts() {
 	// wp_enqueue_style( 'wireframe-style', get_stylesheet_uri() );
 
 	// Theme block stylesheet.
-	wp_enqueue_style( 'wireframe-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'wireframe-style' ), '1.1' );
+	wp_enqueue_style( 'wireframe-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'parent-styles' ), '1.1' );
 
 	// Load the dark colorscheme.
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
-		wp_enqueue_style( 'wireframe-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'wireframe-style' ), '1.0' );
+		wp_enqueue_style( 'wireframe-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'parent-styles' ), '1.0' );
 	}
 
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'wireframe-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'wireframe-style' ), '1.0' );
+		wp_enqueue_style( 'wireframe-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'parent-styles' ), '1.0' );
 		wp_style_add_data( 'wireframe-ie9', 'conditional', 'IE 9' );
 	}
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'wireframe-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'wireframe-style' ), '1.0' );
+	wp_enqueue_style( 'wireframe-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'parent-styles' ), '1.0' );
 	wp_style_add_data( 'wireframe-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the html5 shiv.
@@ -940,7 +940,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 	
 		// Explicitly queueing of parent theme style.css required for child themes.
 		if(is_child_theme_active()) {
-			wp_enqueue_style('wireframe-style',get_template_directory_uri().'/style.css');
+			wp_enqueue_style('parent-styles',get_template_directory_uri().'/style.css');
 		}
 	
 	
