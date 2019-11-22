@@ -143,9 +143,9 @@ button#overlay-close {
 	}
 
 
-.overlay-content {
-	padding-left:4%;
-}
+	.overlay-content {
+		padding-left:4%;
+	}
 
 
 	.overlay {
