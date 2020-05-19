@@ -43,9 +43,6 @@ aside.sidebar {
 		padding-left:2%;
 		padding-right:2%;
 	}
-	body.home #primary {
-		width:100%;
-	}
 }
 
 @media screen and (min-width:1200px) {

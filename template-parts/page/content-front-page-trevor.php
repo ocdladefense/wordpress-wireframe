@@ -11,12 +11,16 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'wireframe-panel ' ); ?> >
 
-	<?php
-	if ( has_post_thumbnail() ) :
-		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'wireframe-featured-image' );
+	<?php if(has_post_thumbnail()): ?>
+	
+		<?php
+				$thumbnail = wp_get_attachment_image_src(
+					get_post_thumbnail_id( $post->ID ),
+					'wireframe-featured-image'
+				);
 
-		// Calculate aspect ratio: h / w * 100%.
-		$ratio = $thumbnail[2] / $thumbnail[1] * 100;
+				// Calculate aspect ratio: h / w * 100%.
+				$ratio = $thumbnail[2] / $thumbnail[1] * 100;
 		?>
 
 		<div class="panel-image" style="background-image: url(<?php echo esc_url( $thumbnail[0] ); ?>);">
@@ -24,6 +28,7 @@
 		</div><!-- .panel-image -->
 
 	<?php endif; ?>
+
 
 	<div class="panel-content">
 		<div class="wrap">
@@ -38,7 +43,7 @@
 							get_the_title()
 						)
 					);
-					?>
+				?>
 			</div><!-- .entry-content -->
 
 		</div><!-- .wrap -->

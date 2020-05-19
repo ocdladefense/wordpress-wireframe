@@ -80,24 +80,28 @@ get_header(); ?>
 
 		
 		<?php echo wireframe_homepage_sections(); ?>
+		
+		
 		<?php echo wireframe_homepage_pages(); ?>
+
 
 		<div class="trevor-posts-container">
 			<div class="trevor-posts" >
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main" role="main">
 						<?php
-						wp_reset_query();
-						$query = new WP_Query( array( 'post_type' => 'post' ) );
-						// Show the selected front page content.
-						if ($query->have_posts() ) :
-							while ( $query->have_posts() ) :
-								$query->the_post();
-								get_template_part( 'template-parts/page/content', 'front-page-trevor' );
-							endwhile;
-						else :
-							get_template_part( 'template-parts/post/content', 'none' );
-						endif;
+							wp_reset_query();
+							$query = new WP_Query( array( 'post_type' => 'post' ) );
+
+							// Show the selected front page content.
+							if ($query->have_posts() ) :
+								while ( $query->have_posts() ) :
+									$query->the_post();
+									get_template_part( 'template-parts/page/content', 'page' );
+								endwhile;
+							else :
+								get_template_part( 'template-parts/post/content', 'none' );
+							endif;
 						?>
 					</main><!-- #main -->
 				</div><!-- #primary -->
