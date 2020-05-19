@@ -1002,3 +1002,31 @@ function wireframe_get_template_part($slug, $name=null) {
 	}
 	get_template_part($slug,$name);
 }
+
+
+// https://developer.wordpress.org/reference/functions/add_rewrite_rule/
+function wireframe_add_rewrite_rule(){
+	add_action('init', function() {
+ 
+			$page_id = 2; // update 2 (sample page) to your custom page ID where you can get the subscriber(s) data later
+			$page_data = get_post( $page_id );
+ 
+			if( ! is_object($page_data) ) { // post not there
+					return;
+			}
+ 
+			add_rewrite_rule(
+					'^content/([^/]+)/?$',
+					'index.php?pagename=content&content=$matches[1]',
+					'top'
+			);
+ 
+	});
+	
+	/*
+	add_filter('query_vars', function($vars) {
+    $vars[] = "my_subscriber";
+    return $vars;
+	});
+	*/
+}
