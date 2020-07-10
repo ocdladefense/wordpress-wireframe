@@ -108,11 +108,7 @@ ul {
 .admin-bar .global-header {
 	margin-top: 46px;
 }
-@media screen and (min-width:1000px) {
-.admin-bar .global-header {
-	margin-top: 32px;
-}
-}
+
 
 .site-navigation-fixed .global-header {
 	height:100%;
@@ -126,7 +122,7 @@ ul {
 }
 
 .site-header {
-	height: 100vh;
+	height: 60vh;
 	/* width: fit-content; */
 	/* object-fit: cover; */
 	overflow-x: hidden;
@@ -362,4 +358,15 @@ img.logo-overlay {
 
 .default-header{
 	display:none;
+}
+
+
+
+@media screen and (min-width:1000px) {
+.admin-bar .global-header {
+	margin-top: 32px;
+}
+
+.site-header {
+	height: 80vh;
 }
