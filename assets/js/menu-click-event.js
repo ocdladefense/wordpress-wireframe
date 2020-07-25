@@ -23,7 +23,7 @@ function toggleComponent(e)
 	var elem = document.getElementById(controls);
 	var anime = elem.dataset.animation;
 	
-	
+	jQuery(document.body).toggleClass("fly-out-menu");
 	jQuery("#overlay").toggleClass(anime+"-on");
 }
 
