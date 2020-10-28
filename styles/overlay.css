@@ -4,7 +4,7 @@
 	* Prevent distracting sub-menus from displaying in the overlay.
 	*/
 .overlay .menu-item-has-children:hover > .sub-menu {
-	display:none;
+	/**display:none;*/
 }
 
 
@@ -102,6 +102,7 @@ body.fly-out-menu #page {
 	border-bottom-color:transparent;
 }
 
+
 .navigation-main .menu {
 	border-top-width: 1px;
 	border-top-style:solid;
@@ -185,4 +186,30 @@ button#overlay-close {
 		transition-delay: 0.0s, 0.2s;
 	}
 
+}
+
+
+/** Tryiing to fix the font size the sub menus */
+
+.navigation-main .sub-menu li {
+	font-size: 0.9em;
+}
+
+.navigation-main .sub-menu {
+	position: static;
+	display: block;
+}
+
+.navigation-main ul .sub-menu {
+	margin-left: 20px;
+}
+
+.navigation-main .sub-menu li {
+	line-height: 1.9em;
+}
+
+
+.navigation-main .sub-menu {
+
+	display: block;
 }
