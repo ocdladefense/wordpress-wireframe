@@ -13,6 +13,7 @@
 
 
 
+
 .menu ul,
 .widget_nav_menu ul {
 	padding:0;
@@ -85,7 +86,6 @@
 	top:0px;
 	right:0px;
 	margin-left:100%;
-	position: absolute;
 	top: 0px;
 	left: 110%;
 	width: 400px; /* hack */
@@ -192,5 +192,7 @@
 	height: 53px;
 	width: 77px;
 }
+
+
 
 
