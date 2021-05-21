@@ -1,3 +1,26 @@
+<style>
+	.primary {
+		border: #50668F;
+	}
+	.primary {
+		color: #FFFFFF;
+	}
+	.primary, .primary:hover, .primary:focus {
+		background-color: #50668F;
+	}
+	.primary {
+		background-color: #0070d2;
+		color: white;
+		transition: all 0.1s;
+		border: 1px solid transparent;
+		text-decoration: none;
+		border-radius: 4px;
+		padding: 9px;
+		margin: 10px;
+	}
+</style>
+
+
 <?php
 /**
  * The template for displaying all pages
@@ -20,8 +43,11 @@ get_header(); ?>
 <div class="page-wrap wrap">
 <?php get_sidebar('left'); ?>
 	<div id="primary" class="basic-page content-area">
-		<main id="main" class="site-main" role="main">
-            hello world
+		<main id="main" class="site-main" role="main" >
+		<br/>
+		<div style="    width: 100%; padding: 10px; display: block;"></div>
+		<a class="primary" href="<?php echo salesforce_oauth_url_admin(); ?>" title="Login Admin">Login as Administrator</a>
+		<a class="primary" href="<?php echo salesforce_oauth_url_customer(); ?>" title="Login Customer">Login as customer</a>
 			<?php
 			/*while ( have_posts() ) :
 				the_post();
