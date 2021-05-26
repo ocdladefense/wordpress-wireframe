@@ -1,0 +1,1 @@
+<?php echo process_oauth_redirect_uri(); ?>
