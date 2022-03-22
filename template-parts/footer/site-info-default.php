@@ -20,9 +20,17 @@
 		<?php printf( __( confget('site-name.org-name'),'wireframe','WordPress')); ?>
 	</a>
 	
-	<?php 
-		echo confget('site-info.address')."<br />";
+	
 		
-		echo confget('site-info.email');
-	?>
+			<?php print confget('site-info.address'); ?>
+
+	<br />
+		
+	
+	<a href="mailto:<?php print confget('site-info.email');?>">
+		<?php echo confget('site-info.email'); ?>
+	</a>	
+
+	<br />
+		<?php echo confget('site-info.phone'); ?>
 </div><!-- .site-info -->

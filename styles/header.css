@@ -363,10 +363,12 @@ img.logo-overlay {
 
 
 @media screen and (min-width:1000px) {
-.admin-bar .global-header {
-	margin-top: 32px;
-}
+	.admin-bar .global-header {
+		margin-top: 32px;
+	}
 
-.site-header {
-	height: 80vh;
+	.site-header {
+		height: 65vh;
+	}
+
 }
