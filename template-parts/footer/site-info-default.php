@@ -10,19 +10,23 @@
 
 ?>
 <div class="site-info">
-	<?php if(function_exists( 'the_privacy_policy_link' ) ):
-		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-	endif; ?>
+	<?php
+		if(function_exists( 'the_privacy_policy_link' ) ):
+			the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
+		endif;
+	?>
 	
-	<?php echo confget('site-info.website'); ?><br />
+
+	<a href="<?php print "https://" . confget('site-info.website'); ?>">
+		<?php echo confget('site-info.website'); ?>
+	</a>	
 	
-	<a href="<?php echo esc_url( __( confget('site-info.website'), 'wireframe' ) ); ?>" class="imprint">
-		<?php printf( __( confget('site-name.org-name'),'wireframe','WordPress')); ?>
+	
+	<br />
+	
+	<a target="_new" href="https://maps.google.com/?q=<?php print confget('site-info.address'); ?>">
+		<?php print confget('site-info.address'); ?>
 	</a>
-	
-	
-		
-			<?php print confget('site-info.address'); ?>
 
 	<br />
 		
@@ -32,5 +36,9 @@
 	</a>	
 
 	<br />
+
+	<a href="tel:<?php print confget('site-info.phone');?>">
 		<?php echo confget('site-info.phone'); ?>
+	</a>
+		
 </div><!-- .site-info -->
