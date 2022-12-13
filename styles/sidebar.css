@@ -25,8 +25,9 @@ aside.sidebar {
 }
 
 #sidebar-right {
-	display:none;
-	width:15%;
+	display:block;
+	width:auto;
+	max-width: none;
 }
 
 #sidebar-left {
@@ -48,6 +49,7 @@ aside.sidebar {
 @media screen and (min-width:1200px) {
 	#sidebar-right {
 		display:inline-block;
+		width: 15%;
 	}
 	#primary {
 		width:68%;
